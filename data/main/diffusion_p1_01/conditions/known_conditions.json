@@ -1,0 +1,90 @@
+{
+  "schema": "field2law.known_query_conditions.v1",
+  "information": "known preparation and actuator settings only",
+  "release_stage": "after model and coefficients freeze",
+  "records": [
+    {
+      "initial": {
+        "kind": "tensor_modes",
+        "basis": "cos",
+        "domain": {
+          "x": [
+            0.0,
+            3.141592653589793
+          ],
+          "y": [
+            0.0,
+            3.141592653589793
+          ]
+        },
+        "offset": 0.35,
+        "terms": [
+          {
+            "wavenumbers": [
+              2,
+              0
+            ],
+            "amplitude": 0.08
+          },
+          {
+            "wavenumbers": [
+              0,
+              3
+            ],
+            "amplitude": 0.048
+          },
+          {
+            "wavenumbers": [
+              1,
+              2
+            ],
+            "amplitude": 0.024
+          }
+        ]
+      }
+    },
+    {
+      "initial": {
+        "kind": "tensor_modes",
+        "basis": "cos",
+        "domain": {
+          "x": [
+            0.0,
+            3.141592653589793
+          ],
+          "y": [
+            0.0,
+            3.141592653589793
+          ]
+        },
+        "offset": 1.1,
+        "terms": [
+          {
+            "wavenumbers": [
+              2,
+              0
+            ],
+            "amplitude": 0.08
+          },
+          {
+            "wavenumbers": [
+              0,
+              3
+            ],
+            "amplitude": 0.048
+          },
+          {
+            "wavenumbers": [
+              1,
+              2
+            ],
+            "amplitude": 0.024
+          }
+        ]
+      }
+    }
+  ],
+  "sampled_arrays": "retained exact samples of the same conditions, for display and compatibility",
+  "unknown_material_coefficients_included": false,
+  "governing_equation_included": false
+}

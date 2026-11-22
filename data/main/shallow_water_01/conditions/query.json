@@ -1,0 +1,17 @@
+{
+  "task_id": "case_7971274a508704a5",
+  "conditions_file": "conditions.npz",
+  "records": [
+    {
+      "query_id": "query_1",
+      "physical_role": "Change the surface profile, phases and initial horizontal current."
+    },
+    {
+      "query_id": "query_2",
+      "physical_role": "Prepare different surface wavelengths and a different initial current pattern."
+    }
+  ],
+  "release_stage": "after model and coefficients freeze",
+  "same_dynamics": "Only the initial states change; material, apparatus and fitted laws remain fixed.",
+  "initial_representation": "Samples of the smooth periodic initial preparation, reconstructed by Fourier interpolation."
+}

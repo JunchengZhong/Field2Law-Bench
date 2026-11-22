@@ -1,0 +1,70 @@
+{
+  "task_id": "case_6e5a2832945cfd",
+  "context": "These simulations follow smooth waves in an idealized homogeneous medium on a one-dimensional periodic domain. The dimensionless field u is a signed wave disturbance relative to a fixed uniform reference state: u = 0 denotes that state, with positive and negative departures on either side. The mean of an initial profile is its background level, measured from the same reference zero. A fixed moving coordinate frame removes uniform propagation at zero background level. Propagation in this frame depends on the background, while dispersion allows different wavelengths to travel at different speeds. There is no external forcing or dissipation.\n\nThree records start from a positive background, an equally large negative background and a higher positive background, each with a superposed spatial disturbance. The observations use fixed nondimensional scales and have no added measurement noise. Infer an evolution law and predict other initial wave profiles and background levels. The medium, reference state, coordinate frame and scales remain unchanged, and the inferred law and fitted parameters remain fixed.",
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "signed wave amplitude relative to a reference state",
+      "role": "state_to_evolve",
+      "member": "u",
+      "unit": "dimensionless"
+    }
+  ],
+  "units": "fixed nondimensional coordinates and fields, with explicit reference scales if dimensional interpretation is supplied",
+  "geometry": {
+    "axes": [
+      "x"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 6.283185307179586
+      }
+    }
+  },
+  "records": {
+    "count": 3,
+    "ids": [
+      "record_01",
+      "record_02",
+      "record_03"
+    ],
+    "relationship": "Separately prescribed preparations of the same fixed material and geometry; not independent random replicates.",
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  },
+  "observations": {
+    "path": "observations.npz",
+    "members": {
+      "time": {
+        "shape": [
+          129
+        ]
+      },
+      "x": {
+        "shape": [
+          128
+        ]
+      },
+      "u": {
+        "shape": [
+          3,
+          129,
+          128
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "clipped": false
+    },
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  }
+}

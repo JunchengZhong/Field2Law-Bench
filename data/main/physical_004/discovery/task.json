@@ -1,0 +1,59 @@
+{
+  "task_id": "physical_004",
+  "context": "The simulations describe heat transport in a stationary bar whose material composition varies smoothly with position. The field u is temperature departure from a reference temperature. Heat capacity is uniform and normalized to one; there is no volumetric heating during observation. Both endpoint temperatures are prescribed. One record follows cooling after internal heating with both ends at the reference temperature. A second starts at the reference temperature and follows a smooth rise and hold of the left endpoint temperature. The observations have no added measurement noise.\n\nThe constitutive law and spatial coefficient field are unknown. Infer a model that predicts temperature when the initial heated region is moved or the warming program is applied at the opposite end. The material distribution, scales and fitted law remain fixed.",
+  "field": {
+    "name": "u",
+    "units": "nondimensional",
+    "observation_type": "scalar field"
+  },
+  "coordinates": {
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "space": "x",
+    "time": "t",
+    "units": "nondimensional",
+    "grid": "Uniform observed nodes including both endpoints."
+  },
+  "boundary": {
+    "type": "dirichlet",
+    "left": "u(0,t)=g_left(t)",
+    "right": "u(1,t)=g_right(t)",
+    "control_names": [
+      "g_left",
+      "g_right"
+    ]
+  },
+  "records": [
+    {
+      "case_id": "observe_internal_heating",
+      "role": "Heat the interior region x in [0.15,0.75], then watch redistribution with both endpoints held at reference temperature."
+    },
+    {
+      "case_id": "observe_left_warming",
+      "role": "Start at reference temperature and smoothly warm the left endpoint, then hold it fixed."
+    }
+  ],
+  "data_axes": {
+    "u": [
+      "record",
+      "time",
+      "space"
+    ],
+    "boundary_history": [
+      "record",
+      "time",
+      "control"
+    ]
+  },
+  "observation_precision": "No added sensor noise.",
+  "observations": {
+    "path": "observations.npz",
+    "array_order": [
+      "record",
+      "time",
+      "space"
+    ]
+  }
+}

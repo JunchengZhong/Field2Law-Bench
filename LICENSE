@@ -1,0 +1,8 @@
+Field2Law uses separate licenses for code and data.
+
+Original loader and acquisition code: MIT (LICENSES/MIT.txt).
+Original synthetic data, conditions, task annotations and documentation:
+Creative Commons Attribution 4.0 International (LICENSES/CC-BY-4.0.txt).
+Third-party measurements retain their source terms and attribution.
+
+See LICENSES/README.md and docs/DATA_SOURCES.md for the applicable scope.

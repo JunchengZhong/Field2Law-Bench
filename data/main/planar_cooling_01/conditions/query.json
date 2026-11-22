@@ -1,0 +1,19 @@
+{
+  "schema": "field2law.physical_purpose_query.v2",
+  "task_id": "case_c903b9ec04265067",
+  "conditions_file": "conditions.npz",
+  "release_stage": "after model and coefficients freeze",
+  "records": [
+    {
+      "query_id": "query_1",
+      "physical_role": "Increase the initial thermal loading and move the warm region toward the opposite side."
+    },
+    {
+      "query_id": "query_2",
+      "physical_role": "Change the orientation and shape of the initial warm region while preserving the same cold edges."
+    }
+  ],
+  "same_dynamics": "The material, constitutive response and geometry remain unchanged. Only the declared initial preparation changes.",
+  "initial_representation": "Known Dirichlet-compatible sine preparation; samples and function describe the same initial state.",
+  "known_conditions_file": "known_conditions.json"
+}

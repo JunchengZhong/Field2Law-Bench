@@ -1,0 +1,84 @@
+{
+  "task_id": "case_4ce71860e9fcbf40",
+  "context": "These simulations describe an idealized one-dimensional excitable continuum on a periodic segment. The signed state u measures local activation and the signed state v describes recovery; neither is an absolute concentration. Both states are observed in fixed nondimensional units. Local activation interacts with a slower recovery process and neighboring sites can influence the spatial evolution. System settings are uniform and fixed, and no external stimulation is applied after the initial preparation.\n\nOne record starts from a weak localized activation perturbation of the uniform resting state; another starts from a stronger localized activation with the same initial recovery state. The full activation and recovery fields are observed without added measurement noise. Infer the coupled evolution laws and predict other initial perturbation locations, widths and recovery profiles in the same medium, keeping the inferred laws and fitted parameters fixed.",
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "signed dimensionless local activation state",
+      "unit": "dimensionless",
+      "role": "state_to_evolve"
+    },
+    {
+      "name": "v",
+      "meaning": "signed dimensionless recovery state",
+      "unit": "dimensionless",
+      "role": "state_to_evolve"
+    }
+  ],
+  "evolved_fields": [
+    "u",
+    "v"
+  ],
+  "units": "fixed nondimensional scales shared by every preparation",
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x"
+    ]
+  },
+  "boundary": {
+    "type": "periodic",
+    "periods": {
+      "x": 40.0
+    }
+  },
+  "records": [
+    {
+      "id": "preparation_1",
+      "physical_role": "Weak localized perturbation of the resting activation, with recovery initially uniform."
+    },
+    {
+      "id": "preparation_2",
+      "physical_role": "Stronger localized activation, with the same initial recovery state."
+    }
+  ],
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 2,
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ],
+    "members": {
+      "time": {
+        "shape": [
+          121
+        ]
+      },
+      "x": {
+        "shape": [
+          256
+        ]
+      },
+      "u": {
+        "shape": [
+          2,
+          121,
+          256
+        ]
+      },
+      "v": {
+        "shape": [
+          2,
+          121,
+          256
+        ]
+      }
+    },
+    "measurement_noise": {
+      "added": false,
+      "distribution": "none"
+    }
+  }
+}

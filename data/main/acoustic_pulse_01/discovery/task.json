@@ -1,0 +1,46 @@
+{
+  "task_id": "case_a9cd6cc4b8744465",
+  "context": "The simulations describe small pressure and velocity disturbances in a homogeneous, inviscid, compressible medium represented by a one-dimensional periodic domain. The observed fields are pressure perturbation p and velocity v, in fixed nondimensional units. A pressure disturbance containing several wavelengths is released from rest, and both fields are observed as waves propagate in both directions. No external drive acts after preparation, and no measurement noise is added.\n\nThe wave speed and material coefficients are unknown. The goal is to infer coupled evolution laws for pressure and velocity, then predict their propagation from other prescribed initial profiles. The material and small-amplitude regime remain the same, and the inferred laws and fitted parameters are held fixed.",
+  "fields": [
+    {
+      "name": "p",
+      "unit": "fixed nondimensional",
+      "role": "state_to_evolve"
+    },
+    {
+      "name": "v",
+      "unit": "fixed nondimensional",
+      "role": "state_to_evolve"
+    }
+  ],
+  "evolved_fields": [
+    "p",
+    "v"
+  ],
+  "geometry": {
+    "axes": [
+      "x"
+    ]
+  },
+  "boundary": {
+    "type": "periodic",
+    "axes": [
+      "x"
+    ],
+    "periods": {
+      "x": 6.283185307179586
+    }
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 1,
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ],
+    "measurement_noise": {
+      "added": false
+    }
+  }
+}

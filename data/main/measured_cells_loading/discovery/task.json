@@ -1,0 +1,71 @@
+{
+  "task_id": "measured_cells_loading",
+  "context": "The data are measured spatial cell-density profiles from scratch assays using the same cell line and experimental setup. The field u is cell density in units of 1000 cells/mm^2, x is measured in mm, and time in days. The observations include four initial seeding amounts, with three measured replicates per amount. The initial seeding amounts and density profiles are supplied.\n\nThe aim is to infer an effective evolution law and predict density recovery at other seeding amounts in the same experimental setting. For each prediction, the initial density profile and the measured density histories at both ends are given; the target is the future interior density. The fitted law, including any state-dependent response functions, remains fixed.",
+  "fields": [
+    "u"
+  ],
+  "units": {
+    "x": "mm",
+    "time": "days",
+    "u": "1000 cells/mm^2"
+  },
+  "records": [
+    {
+      "initial_cells_per_well": 10000,
+      "replicate": 1
+    },
+    {
+      "initial_cells_per_well": 10000,
+      "replicate": 2
+    },
+    {
+      "initial_cells_per_well": 10000,
+      "replicate": 3
+    },
+    {
+      "initial_cells_per_well": 14000,
+      "replicate": 1
+    },
+    {
+      "initial_cells_per_well": 14000,
+      "replicate": 2
+    },
+    {
+      "initial_cells_per_well": 14000,
+      "replicate": 3
+    },
+    {
+      "initial_cells_per_well": 20000,
+      "replicate": 1
+    },
+    {
+      "initial_cells_per_well": 20000,
+      "replicate": 2
+    },
+    {
+      "initial_cells_per_well": 20000,
+      "replicate": 3
+    },
+    {
+      "initial_cells_per_well": 16000,
+      "replicate": 1
+    },
+    {
+      "initial_cells_per_well": 16000,
+      "replicate": 2
+    },
+    {
+      "initial_cells_per_well": 16000,
+      "replicate": 3
+    }
+  ],
+  "packet_kind": "measured_cells",
+  "observations": {
+    "path": "observations.npz",
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  }
+}

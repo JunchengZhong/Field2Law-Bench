@@ -1,0 +1,109 @@
+{
+  "task_id": "case_7971274a508704a5",
+  "context": "These simulations describe long surface waves and horizontal flow in an idealized shallow layer of water above a fixed flat bed. The depth h and both depth-averaged horizontal velocity components u and v are observed. The domain is a horizontally repeating patch, with no side walls, applied wind, external inflow or bottom friction in this idealization. Gravity is constant, depth stays positive, and the observation interval precedes wave breaking. Fixed nondimensional coordinate, time, depth and velocity scales are used.\n\nTwo preparations combine different smooth surface profiles and horizontal velocity patterns; the second includes a uniform background current. All three fields are observed without added measurement noise. Infer their coupled evolution laws and fixed response parameters, then predict new surface and velocity preparations under the same bed, gravity and physical regime. The inferred laws and fitted parameters remain fixed.",
+  "fields": [
+    {
+      "name": "h",
+      "meaning": "total water depth",
+      "unit": "dimensionless",
+      "role": "state_to_evolve"
+    },
+    {
+      "name": "u",
+      "meaning": "depth-averaged horizontal velocity along x",
+      "unit": "dimensionless",
+      "role": "state_to_evolve"
+    },
+    {
+      "name": "v",
+      "meaning": "depth-averaged horizontal velocity along y",
+      "unit": "dimensionless",
+      "role": "state_to_evolve"
+    }
+  ],
+  "evolved_fields": [
+    "h",
+    "u",
+    "v"
+  ],
+  "units": "fixed nondimensional scales shared by every preparation",
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x",
+      "y"
+    ]
+  },
+  "boundary": {
+    "type": "periodic",
+    "periods": {
+      "x": 6.283185307179586,
+      "y": 6.283185307179586
+    }
+  },
+  "records": [
+    {
+      "id": "preparation_1",
+      "physical_role": "A smooth multiscale surface displacement with a weak spatially varying current."
+    },
+    {
+      "id": "preparation_2",
+      "physical_role": "A different directional surface profile with a background current and spatial velocity variation."
+    }
+  ],
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 2,
+    "array_order": [
+      "record",
+      "time",
+      "x",
+      "y"
+    ],
+    "members": {
+      "time": {
+        "shape": [
+          61
+        ]
+      },
+      "x": {
+        "shape": [
+          32
+        ]
+      },
+      "y": {
+        "shape": [
+          32
+        ]
+      },
+      "h": {
+        "shape": [
+          2,
+          61,
+          32,
+          32
+        ]
+      },
+      "u": {
+        "shape": [
+          2,
+          61,
+          32,
+          32
+        ]
+      },
+      "v": {
+        "shape": [
+          2,
+          61,
+          32,
+          32
+        ]
+      }
+    },
+    "measurement_noise": {
+      "added": false,
+      "distribution": "none"
+    }
+  }
+}

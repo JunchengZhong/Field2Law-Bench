@@ -1,0 +1,50 @@
+{
+  "task_id": "case_a30a75a6a3467cf2",
+  "packet_kind": "measured_scalar_line",
+  "context": "The data are camera-reconstructed surface elevations from a unidirectional focusing wave-group experiment in the Imperial College London water tank, from the BUBER/EURUS experimental data used by the source study. The signed field u is the measured water-surface elevation in metres, x is the along-tank position in metres, and time is in seconds. The selected record has a nominal peak period of 1.2 s. One continuous central camera view is used. Each frame is linearly sampled onto a fixed spatial grid within its measured coverage; no interpolation across camera gaps or additional temporal smoothing is applied. Subsurface velocities and pressure are not observed.\n\nThe public observations show the first part of this single experiment. Infer an effective surface-elevation evolution model and predict the later wave profile in the same observation window from a new measured initial profile. Measured elevation histories in narrow strips at both edges are supplied as conditions, because the edges of the camera view are not physical walls. The target is the future interior surface elevation. The inferred model and fitted parameters remain fixed; an exact closed surface-elevation PDE is not supplied or assumed.",
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "signed measured surface elevation",
+      "unit": "m",
+      "role": "state_to_evolve"
+    }
+  ],
+  "evolved_fields": [
+    "u"
+  ],
+  "units": {
+    "x": "m",
+    "time": "s",
+    "u": "m"
+  },
+  "geometry": {
+    "type": "observed_line_window",
+    "axes": [
+      "x"
+    ]
+  },
+  "boundary": {
+    "type": "measured_strips_1d",
+    "width": 5,
+    "meaning": "Known measured elevation in the first and last five grid nodes throughout prediction; not tank-wall boundary conditions."
+  },
+  "records": [
+    {
+      "id": "early_wave_window",
+      "physical_role": "Earlier observed evolution in the same fixed camera view."
+    }
+  ],
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 1,
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ],
+    "sampling_interval_seconds": 0.05,
+    "spatial_processing": "frame-wise linear interpolation within measured coverage",
+    "temporal_processing": "none added by this benchmark"
+  }
+}

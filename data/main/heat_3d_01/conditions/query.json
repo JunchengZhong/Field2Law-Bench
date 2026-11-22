@@ -1,0 +1,136 @@
+{
+  "schema": "field2law.physical_purpose_query.v1",
+  "task_id": "case_82b2901665676126",
+  "status": "candidate_prediction_inputs_not_runtime_admitted",
+  "release_stage": "After frozen model submission",
+  "records": [
+    {
+      "query_id": "query_1",
+      "initial_record": 0,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    },
+    {
+      "query_id": "query_2",
+      "initial_record": 1,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    },
+    {
+      "query_id": "query_3",
+      "initial_record": 2,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    },
+    {
+      "query_id": "query_4",
+      "initial_record": 3,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    }
+  ],
+  "initial_asset": {
+    "path": "initial_conditions.npz",
+    "members": {
+      "x": {
+        "shape": [
+          33
+        ],
+        "dtype": "<f8"
+      },
+      "y": {
+        "shape": [
+          33
+        ],
+        "dtype": "<f8"
+      },
+      "z": {
+        "shape": [
+          33
+        ],
+        "dtype": "<f8"
+      },
+      "time": {
+        "shape": [
+          41
+        ],
+        "dtype": "<f8"
+      },
+      "initial__u": {
+        "shape": [
+          4,
+          33,
+          33,
+          33
+        ],
+        "dtype": "<f8"
+      }
+    }
+  },
+  "boundary_controls": {
+    "path": "boundary_controls.npz",
+    "members": {
+      "time": {
+        "shape": [
+          41
+        ],
+        "dtype": "<f8"
+      },
+      "face_temperature": {
+        "shape": [
+          4,
+          41,
+          6,
+          33,
+          33
+        ],
+        "dtype": "<f8"
+      }
+    }
+  },
+  "boundary": {
+    "type": "six_prescribed_temperatures",
+    "face_order": [
+      "x_lower",
+      "x_upper",
+      "y_lower",
+      "y_upper",
+      "z_lower",
+      "z_upper"
+    ],
+    "discovery_value": 0.0
+  },
+  "geometry": {
+    "type": "Cartesian_tensor_grid",
+    "dimension": 3,
+    "array_spatial_axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "boundary": {
+      "type": "six_prescribed_temperatures",
+      "face_order": [
+        "x_lower",
+        "x_upper",
+        "y_lower",
+        "y_upper",
+        "z_lower",
+        "z_upper"
+      ],
+      "discovery_value": 0.0
+    }
+  },
+  "units": "x=X/(0.1m), y=Y/(0.1m), z=Z/(0.1m), t=t_phys/(100s), u=(T-293.15K)/(10K).",
+  "evolved_fields": [
+    "u"
+  ],
+  "known_relations": null,
+  "hidden_outputs": [
+    "u"
+  ],
+  "constraints": [
+    "No test-time coefficient fitting.",
+    "No hidden interior values may be accessed during discovery or prediction.",
+    "Use the submitted model to implement any required flux and boundary operation; do not fill missing model quantities using reference coefficients."
+  ],
+  "known_conditions_file": "known_conditions.json",
+  "condition_representation": "Known continuous preparation/control definition; arrays are samples of that same definition.",
+  "condition_revision": "known_conditions_candidate_20261108_v3"
+}

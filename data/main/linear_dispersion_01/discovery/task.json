@@ -1,0 +1,40 @@
+{
+  "task_id": "case_19bdbc1872905696",
+  "context": "The simulations follow a small-amplitude dispersive wave in a homogeneous periodic medium. The signed field u is a wave displacement perturbation, observed in a frame moving with the known uniform transport velocity. Dissipation and nonlinear amplitude effects are negligible over the observation window. A small initial perturbation containing several wavelengths is observed over time without added measurement noise, using fixed nondimensional scales.\n\nThe dispersive evolution law and its coefficients are unknown. The aim is to infer a model that predicts the evolution of other initial waveforms in the same medium and amplitude regime. The reference frame and material remain fixed, and the inferred law and fitted parameters are used without adjustment.",
+  "fields": [
+    {
+      "name": "u",
+      "unit": "fixed nondimensional",
+      "role": "state_to_evolve"
+    }
+  ],
+  "evolved_fields": [
+    "u"
+  ],
+  "geometry": {
+    "axes": [
+      "x"
+    ]
+  },
+  "boundary": {
+    "type": "periodic",
+    "axes": [
+      "x"
+    ],
+    "periods": {
+      "x": 6.283185307179586
+    }
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 1,
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ],
+    "measurement_noise": {
+      "added": false
+    }
+  }
+}

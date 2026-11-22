@@ -1,0 +1,58 @@
+{
+  "task_id": "physical_001",
+  "version": "physical_scenario_pilot_20261105_v2",
+  "release_stage": "After model and coefficients freeze",
+  "queries": [
+    {
+      "id": "predict_more_heat",
+      "split": "hidden",
+      "physical_role": "Repeat the same spatial heating preparation with 30% more temperature departure.",
+      "initial": {
+        "kind": "cosine",
+        "mean": 1.3,
+        "a": 0.35,
+        "b": 0.12
+      },
+      "controls": [
+        {
+          "kind": "zero"
+        },
+        {
+          "kind": "zero"
+        }
+      ]
+    },
+    {
+      "id": "predict_opposite_heating",
+      "split": "hidden",
+      "physical_role": "Heat the opposite side of the same bar by reflecting the initial profile.",
+      "initial": {
+        "kind": "cosine",
+        "mean": 1,
+        "a": -0.35,
+        "b": 0.12
+      },
+      "controls": [
+        {
+          "kind": "zero"
+        },
+        {
+          "kind": "zero"
+        }
+      ]
+    }
+  ],
+  "known_initial_formulas": {
+    "cosine": "mean*(1+a*cos(pi*x)+b*cos(2*pi*x))"
+  },
+  "known_control_formulas": {
+    "zero": "0"
+  },
+  "T": 1.0,
+  "known_interface": null,
+  "use": "Initial preparation and apparatus inputs only; no parameter fitting to query targets.",
+  "future_interior_supplied": false,
+  "known_conditions_file": "known_conditions.json",
+  "condition_representation": "Known continuous preparation/control definition; arrays are samples of that same definition.",
+  "condition_revision": "known_conditions_candidate_20261108_v3"
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.DS_Store
+workspaces/
+data/main/measured_cells_loading/discovery/observations.npz
+data/main/measured_cells_loading/conditions/conditions.npz
+data/main/measured_wave_window/discovery/observations.npz
+data/main/measured_wave_window/conditions/conditions.npz

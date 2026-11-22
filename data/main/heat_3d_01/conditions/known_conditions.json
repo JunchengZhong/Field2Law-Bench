@@ -1,0 +1,374 @@
+{
+  "schema": "field2law.known_query_conditions.v1",
+  "information": "known preparation and actuator settings only",
+  "release_stage": "after model and coefficients freeze",
+  "records": [
+    {
+      "initial": {
+        "kind": "tensor_modes",
+        "basis": "sin",
+        "domain": {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ],
+          "z": [
+            0.0,
+            1.0
+          ]
+        },
+        "terms": [
+          {
+            "wavenumbers": [
+              1,
+              1,
+              1
+            ],
+            "amplitude": 0.7
+          },
+          {
+            "wavenumbers": [
+              2,
+              1,
+              1
+            ],
+            "amplitude": 0.06
+          },
+          {
+            "wavenumbers": [
+              1,
+              2,
+              1
+            ],
+            "amplitude": 0.048
+          },
+          {
+            "wavenumbers": [
+              1,
+              1,
+              2
+            ],
+            "amplitude": 0.039
+          },
+          {
+            "wavenumbers": [
+              3,
+              1,
+              2
+            ],
+            "amplitude": 0.018
+          },
+          {
+            "wavenumbers": [
+              2,
+              3,
+              1
+            ],
+            "amplitude": 0.012
+          }
+        ]
+      },
+      "face_control": {
+        "kind": "sine_squared_face",
+        "domain": {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ],
+          "z": [
+            0.0,
+            1.0
+          ]
+        },
+        "duration": 1.0,
+        "axis": "x",
+        "side": 0,
+        "amplitude": 0.0
+      }
+    },
+    {
+      "initial": {
+        "kind": "tensor_modes",
+        "basis": "sin",
+        "domain": {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ],
+          "z": [
+            0.0,
+            1.0
+          ]
+        },
+        "terms": [
+          {
+            "wavenumbers": [
+              1,
+              1,
+              1
+            ],
+            "amplitude": 0.7
+          },
+          {
+            "wavenumbers": [
+              2,
+              1,
+              1
+            ],
+            "amplitude": 0.06
+          },
+          {
+            "wavenumbers": [
+              1,
+              2,
+              1
+            ],
+            "amplitude": 0.048
+          },
+          {
+            "wavenumbers": [
+              1,
+              1,
+              2
+            ],
+            "amplitude": 0.039
+          },
+          {
+            "wavenumbers": [
+              3,
+              1,
+              2
+            ],
+            "amplitude": 0.018
+          },
+          {
+            "wavenumbers": [
+              2,
+              3,
+              1
+            ],
+            "amplitude": 0.012
+          }
+        ]
+      },
+      "face_control": {
+        "kind": "sine_squared_face",
+        "domain": {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ],
+          "z": [
+            0.0,
+            1.0
+          ]
+        },
+        "duration": 1.0,
+        "axis": "x",
+        "side": 0,
+        "amplitude": 0.3
+      }
+    },
+    {
+      "initial": {
+        "kind": "tensor_modes",
+        "basis": "sin",
+        "domain": {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ],
+          "z": [
+            0.0,
+            1.0
+          ]
+        },
+        "terms": [
+          {
+            "wavenumbers": [
+              1,
+              1,
+              1
+            ],
+            "amplitude": 1.1
+          },
+          {
+            "wavenumbers": [
+              2,
+              1,
+              1
+            ],
+            "amplitude": 0.066
+          },
+          {
+            "wavenumbers": [
+              1,
+              2,
+              1
+            ],
+            "amplitude": 0.042
+          },
+          {
+            "wavenumbers": [
+              1,
+              1,
+              2
+            ],
+            "amplitude": 0.039
+          },
+          {
+            "wavenumbers": [
+              3,
+              1,
+              2
+            ],
+            "amplitude": 0.018
+          },
+          {
+            "wavenumbers": [
+              2,
+              3,
+              1
+            ],
+            "amplitude": 0.012
+          }
+        ]
+      },
+      "face_control": {
+        "kind": "sine_squared_face",
+        "domain": {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ],
+          "z": [
+            0.0,
+            1.0
+          ]
+        },
+        "duration": 1.0,
+        "axis": "y",
+        "side": 0,
+        "amplitude": 0.4
+      }
+    },
+    {
+      "initial": {
+        "kind": "tensor_modes",
+        "basis": "sin",
+        "domain": {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ],
+          "z": [
+            0.0,
+            1.0
+          ]
+        },
+        "terms": [
+          {
+            "wavenumbers": [
+              1,
+              1,
+              1
+            ],
+            "amplitude": 1.3
+          },
+          {
+            "wavenumbers": [
+              2,
+              1,
+              1
+            ],
+            "amplitude": 0.072
+          },
+          {
+            "wavenumbers": [
+              1,
+              2,
+              1
+            ],
+            "amplitude": 0.036000000000000004
+          },
+          {
+            "wavenumbers": [
+              1,
+              1,
+              2
+            ],
+            "amplitude": 0.039
+          },
+          {
+            "wavenumbers": [
+              3,
+              1,
+              2
+            ],
+            "amplitude": 0.018
+          },
+          {
+            "wavenumbers": [
+              2,
+              3,
+              1
+            ],
+            "amplitude": 0.012
+          }
+        ]
+      },
+      "face_control": {
+        "kind": "sine_squared_face",
+        "domain": {
+          "x": [
+            0.0,
+            1.0
+          ],
+          "y": [
+            0.0,
+            1.0
+          ],
+          "z": [
+            0.0,
+            1.0
+          ]
+        },
+        "duration": 1.0,
+        "axis": "z",
+        "side": 0,
+        "amplitude": 0.5
+      }
+    }
+  ],
+  "sampled_arrays": "retained exact samples of the same conditions, for display and compatibility",
+  "unknown_material_coefficients_included": false,
+  "governing_equation_included": false
+}

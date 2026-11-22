@@ -1,0 +1,26 @@
+{
+  "schema": "field2law.known_query_conditions.v1",
+  "information": "known preparation and actuator settings only",
+  "release_stage": "after model and coefficients freeze",
+  "records": [
+    {
+      "initial": {
+        "kind": "periodic_packet",
+        "background": 0.1,
+        "amplitude": 0.6,
+        "center": 0.25
+      }
+    },
+    {
+      "initial": {
+        "kind": "periodic_packet",
+        "background": 0.1,
+        "amplitude": 0.4,
+        "center": 0.65
+      }
+    }
+  ],
+  "sampled_arrays": "retained exact samples of the same conditions, for display and compatibility",
+  "unknown_material_coefficients_included": false,
+  "governing_equation_included": false
+}

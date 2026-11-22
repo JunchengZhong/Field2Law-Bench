@@ -1,0 +1,11 @@
+Original Field2Law synthetic data, generated condition inputs, task annotations
+and documentation are licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+
+Copyright (c) 2026 Field2Law contributors.
+
+License summary: https://creativecommons.org/licenses/by/4.0/
+Binding legal terms: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Credit Field2Law and identify changes when redistributing or adapting these
+materials. The grant does not replace third-party measurement licenses.

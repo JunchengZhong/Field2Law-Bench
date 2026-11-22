@@ -1,0 +1,100 @@
+{
+  "task_id": "case_28502eb26383b7d2",
+  "context": "The simulations describe heat redistribution in a homogeneous solid plate with a concentric circular hole. The plate has uniform thickness, the initial temperature is uniform through the thickness, and its two planar faces are insulated. Temperatures are prescribed at the inner and outer circular edges. There is no material motion or internal heat generation. The observed field u is the in-plane temperature departure from a reference temperature, sampled on the supplied mesh. The observation records cooling from a nonuniform initial temperature while both edges remain at the reference temperature, with no added measurement noise.\n\nThe aim is to infer the temperature evolution law and predict the plate temperature under new initial heating distributions or prescribed edge-temperature histories. The specimen and material remain unchanged, and the inferred law and fitted parameters are held fixed.",
+  "fields": [
+    {
+      "name": "u",
+      "role": "state_to_evolve",
+      "meaning": "temperature departure",
+      "unit": "dimensionless"
+    }
+  ],
+  "evolved_fields": [
+    "u"
+  ],
+  "units": "x=X/(0.05m), y=Y/(0.05m), t=t_phys/(100s), u=(T-293.15K)/(10K). These are scenario scales, not a material calibration.",
+  "geometry": {
+    "type": "triangular_mesh",
+    "dimension": 2,
+    "array_spatial_axes": [
+      "node"
+    ],
+    "coordinates": [
+      "x",
+      "y"
+    ],
+    "boundary": {
+      "type": "prescribed_temperature",
+      "inner_tag": 1,
+      "outer_tag": 2,
+      "discovery_temperature": 0.0
+    },
+    "circles": {
+      "outer_center": [
+        0.0,
+        0.0
+      ],
+      "outer_radius": 1.0,
+      "inner_center": [
+        0.0,
+        0.0
+      ],
+      "inner_radius": 0.2
+    },
+    "holes_have_no_samples": true,
+    "mesh_role": "Coordinates and connectivity only; no differential or stiffness operator is supplied."
+  },
+  "boundary": {
+    "type": "prescribed_temperature",
+    "inner_tag": 1,
+    "outer_tag": 2,
+    "discovery_temperature": 0.0
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 1,
+    "record_ids": [
+      "preparation_1"
+    ],
+    "array_order": [
+      "record",
+      "time",
+      "node"
+    ],
+    "members": {
+      "nodes": {
+        "shape": [
+          1088,
+          2
+        ]
+      },
+      "triangles": {
+        "shape": [
+          2048,
+          3
+        ]
+      },
+      "boundary_tags": {
+        "shape": [
+          1088
+        ]
+      },
+      "time": {
+        "shape": [
+          41
+        ]
+      },
+      "u": {
+        "shape": [
+          1,
+          41,
+          1088
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "added": false
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "task_id": "case_1ef563b71d89baa0",
+  "context": "The simulations describe unforced two-dimensional incompressible flow in a periodic domain with zero mean velocity. Vorticity omega and the velocity components u and v are observed for a predominantly shear-like initial flow and for interacting vortical structures, without added measurement noise. The convention is omega = dv/dx - du/dy. The supplied kinematic relation reconstructs velocity from mean-zero vorticity: solve -Delta psi = omega with mean(psi) = 0, then set u = dpsi/dy and v = -dpsi/dx.\n\nThe task is to infer the vorticity evolution law and predict vorticity from new initial fields in the same flow setting. Velocity is obtained through the given relation; pressure and separate velocity evolution equations are outside this task. The nondimensional scales, inferred law and fitted parameters remain fixed.",
+  "fields": [
+    {
+      "name": "omega",
+      "meaning": "signed scalar vorticity",
+      "role": "state_to_evolve",
+      "member": "omega",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "u",
+      "meaning": "velocity along x",
+      "role": "observed_auxiliary_field",
+      "member": "u",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "v",
+      "meaning": "velocity along y",
+      "role": "observed_auxiliary_field",
+      "member": "v",
+      "unit": "dimensionless"
+    }
+  ],
+  "evolved_fields": [
+    "omega"
+  ],
+  "units": "fixed nondimensional coordinates and fields, with explicit reference scales if dimensional interpretation is supplied",
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x",
+      "y"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 6.283185307179586,
+        "y": 6.283185307179586
+      }
+    }
+  },
+  "boundary": {
+    "type": "periodic",
+    "periods": {
+      "x": 6.283185307179586,
+      "y": 6.283185307179586
+    }
+  },
+  "known_relations": {
+    "kinematic_closure": "incompressible_velocity",
+    "scope": "Declared auxiliary kinematics only; no unknown evolution or constitutive law supplied.",
+    "kinematic_convention": "For mean-zero omega on the periodic domain, solve -Delta psi = omega with mean(psi) = 0; set u = dpsi/dy and v = -dpsi/dx. The spatial zero mode is excluded from the inversion."
+  },
+  "acquisition_controls": {
+    "controlled_launch": null
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 2,
+    "record_ids": [
+      "preparation_1",
+      "preparation_2"
+    ],
+    "array_order": [
+      "trajectory",
+      "time",
+      "x",
+      "y"
+    ],
+    "members": {
+      "time": {
+        "shape": [
+          129
+        ]
+      },
+      "x": {
+        "shape": [
+          64
+        ]
+      },
+      "y": {
+        "shape": [
+          64
+        ]
+      },
+      "omega": {
+        "shape": [
+          2,
+          129,
+          64,
+          64
+        ]
+      },
+      "u": {
+        "shape": [
+          2,
+          129,
+          64,
+          64
+        ]
+      },
+      "v": {
+        "shape": [
+          2,
+          129,
+          64,
+          64
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "added": false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "task_id": "case_4ce71860e9fcbf40",
+  "conditions_file": "conditions.npz",
+  "records": [
+    {
+      "query_id": "query_1",
+      "physical_role": "Move and broaden a finite-amplitude activation preparation."
+    },
+    {
+      "query_id": "query_2",
+      "physical_role": "Prepare two separated activation regions with a modest initial recovery variation."
+    }
+  ],
+  "release_stage": "after model and coefficients freeze",
+  "same_dynamics": "Only the initial states change; material, apparatus and fitted laws remain fixed.",
+  "initial_representation": "Samples of the smooth periodic initial preparation, reconstructed by Fourier interpolation."
+}

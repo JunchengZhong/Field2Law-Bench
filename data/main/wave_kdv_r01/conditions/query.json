@@ -1,0 +1,33 @@
+{
+  "schema": "field2law.physical_use.query_view.v1",
+  "task_id": "case_6e5a2832945cfd",
+  "release_stage": "only_after_model_and_parameters_are_frozen",
+  "query_count": 2,
+  "query_ids": [
+    "query_01",
+    "query_02"
+  ],
+  "conditions_file": "conditions.npz",
+  "array_axes": {
+    "u0": [
+      "query",
+      "x"
+    ]
+  },
+  "initial_state": "Exact prescribed synthetic initial samples on the supplied grid.",
+  "boundary": {
+    "type": "periodic",
+    "periods": {
+      "x": 6.283185307179586
+    }
+  },
+  "known_inputs": [
+    "initial field u0",
+    "coordinates and requested times",
+    "fixed periodic or no-flux boundary setup",
+    "unchanged physical scales"
+  ],
+  "future_interior_provided": false,
+  "refit_allowed": false,
+  "fixed_material_and_geometry": true
+}

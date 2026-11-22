@@ -1,0 +1,87 @@
+{
+  "task_id": "case_3e4a583975ae39d8",
+  "context": "The simulations describe heat spreading in a homogeneous planar sheet represented by a periodically repeating patch. The field u is temperature departure from a uniform reference temperature. Heat capacity is uniform, and the constant in-plane diffusivity tensor is symmetric positive definite. Its principal directions are known to lie along the two diagonals of the supplied Cartesian axes, while the diffusivities are unknown. Heating stops before observation; there is no advection or internal heat source. Periodicity represents a repeated patch without physical edge contacts.\n\nA temperature pattern containing several spatial directions and wavelengths is observed over time without added measurement noise. The goal is to infer the temperature evolution law within these stated material assumptions and predict new initial temperature patterns using the same fitted parameters and fixed nondimensional scales.",
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "signed temperature departure from a uniform reference temperature",
+      "role": "state_to_evolve",
+      "member": "u",
+      "unit": "dimensionless"
+    }
+  ],
+  "evolved_fields": [
+    "u"
+  ],
+  "units": "fixed nondimensional coordinates and fields, with explicit reference scales if dimensional interpretation is supplied",
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x",
+      "y"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 6.283185307179586,
+        "y": 6.283185307179586
+      }
+    }
+  },
+  "boundary": {
+    "type": "periodic",
+    "periods": {
+      "x": 6.283185307179586,
+      "y": 6.283185307179586
+    }
+  },
+  "known_relations": {
+    "kinematic_closure": null,
+    "scope": "Declared auxiliary kinematics only; no unknown evolution or constitutive law supplied."
+  },
+  "acquisition_controls": {
+    "controlled_launch": null
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 1,
+    "record_ids": [
+      "preparation_1"
+    ],
+    "array_order": [
+      "trajectory",
+      "time",
+      "x",
+      "y"
+    ],
+    "members": {
+      "time": {
+        "shape": [
+          257
+        ]
+      },
+      "x": {
+        "shape": [
+          128
+        ]
+      },
+      "y": {
+        "shape": [
+          128
+        ]
+      },
+      "u": {
+        "shape": [
+          1,
+          257,
+          128,
+          128
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "added": false
+    }
+  }
+}

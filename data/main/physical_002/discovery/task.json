@@ -1,0 +1,50 @@
+{
+  "task_id": "physical_002",
+  "context": "The simulations follow a passive tracer in a uniform recirculating channel. The field u is tracer concentration along the closed loop. The loop geometry and circulation apparatus setting remain fixed, with no reaction or externally imposed source after the initial preparation. A smooth localized addition above a uniform background concentration is observed as it moves and spreads around the loop, without added measurement noise and using fixed nondimensional scales.\n\nThe task is to infer the concentration evolution law and predict the passage and spreading of tracer released at a different added dose or location; the background concentration is unchanged. The circulation setting and underlying transport response are unchanged; the inferred law and fitted parameters must be reused without adjustment.",
+  "field": {
+    "name": "u",
+    "units": "nondimensional",
+    "observation_type": "scalar field"
+  },
+  "coordinates": {
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "space": "x",
+    "time": "t",
+    "units": "nondimensional",
+    "grid": "Uniform observed nodes; periodic right endpoint excluded."
+  },
+  "boundary": {
+    "type": "periodic",
+    "period": 1.0
+  },
+  "records": [
+    {
+      "case_id": "observe_injection",
+      "role": "Observe advection and spreading after a smooth localized tracer preparation."
+    }
+  ],
+  "data_axes": {
+    "u": [
+      "record",
+      "time",
+      "space"
+    ],
+    "boundary_history": [
+      "record",
+      "time",
+      "control"
+    ]
+  },
+  "observation_precision": "No added sensor noise.",
+  "observations": {
+    "path": "observations.npz",
+    "array_order": [
+      "record",
+      "time",
+      "space"
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "task_id": "case_c13757e1e9a76d12",
+  "context": "The simulations describe two interacting concentration fields, substrate u and activator v, in a three-dimensional diffusive medium. The domain is a periodic representative volume with spatially uniform reservoir settings for supply and removal. Bulk advection is neglected. Both concentrations are observed for two initial substrate and activator loadings, including a higher activator seeding, without added measurement noise.\n\nThe aim is to infer coupled evolution laws for the two concentrations and predict their spatial redistribution and reaction under new initial loadings. The material, reservoir settings and nondimensional scales remain unchanged across the records and subsequent predictions. The reaction response and transport parameters are to be inferred from the observations, and the fitted laws and parameters must remain fixed when predicting the new fields.",
+  "fields": [
+    {
+      "name": "u",
+      "role": "state_to_evolve",
+      "meaning": "substrate concentration",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "v",
+      "role": "state_to_evolve",
+      "meaning": "activator concentration",
+      "unit": "dimensionless"
+    }
+  ],
+  "evolved_fields": [
+    "u",
+    "v"
+  ],
+  "units": "Fixed nondimensional spatial, time and concentration scales; no material-specific SI calibration is claimed.",
+  "geometry": {
+    "type": "Cartesian_tensor_grid",
+    "dimension": 3,
+    "array_spatial_axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 6.283185307179586,
+        "y": 6.283185307179586,
+        "z": 6.283185307179586
+      }
+    }
+  },
+  "boundary": {
+    "type": "periodic",
+    "periods": {
+      "x": 6.283185307179586,
+      "y": 6.283185307179586,
+      "z": 6.283185307179586
+    }
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 2,
+    "record_ids": [
+      "preparation_1",
+      "preparation_2"
+    ],
+    "array_order": [
+      "record",
+      "time",
+      "x",
+      "y",
+      "z"
+    ],
+    "members": {
+      "x": {
+        "shape": [
+          24
+        ]
+      },
+      "y": {
+        "shape": [
+          24
+        ]
+      },
+      "z": {
+        "shape": [
+          24
+        ]
+      },
+      "time": {
+        "shape": [
+          41
+        ]
+      },
+      "u": {
+        "shape": [
+          2,
+          41,
+          24,
+          24,
+          24
+        ]
+      },
+      "v": {
+        "shape": [
+          2,
+          41,
+          24,
+          24,
+          24
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "added": false
+    }
+  }
+}

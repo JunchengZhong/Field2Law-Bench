@@ -1,0 +1,77 @@
+{
+  "task_id": "case_b9ee529eb4991b",
+  "context": "The simulations describe substrate diffusion and consumption in a homogeneous catalytic medium represented by a one-dimensional periodic domain. The nonnegative field u is the substrate concentration. The catalytic material is immobilized and has fixed capacity. Local binding equilibrates faster than the observed concentration changes, so consumption is described by an instantaneous saturating response. Product feedback is negligible, and there is no imposed flow or substrate supply.\n\nConcentration fields are supplied for three nonuniform initial loadings, spanning low, intermediate and high concentrations, with the declared measurement noise. The aim is to infer the transport and consumption law, including the unknown form and parameters of the saturating response, and predict new initial concentration distributions. The catalytic setting, time-scale approximation and nondimensional scales remain the same; the inferred law and fitted parameters remain fixed.\n\nThe recorded state fields include independent zero-mean Gaussian readout noise. For each field, the noise standard deviation is 1% of its pooled clean public signal RMS. The numerical standard deviations are supplied below. Prescribed boundary control histories remain exact; recorded field samples, including endpoint measurements, may differ from these controls. No clipping or denoising is applied by the dataset.",
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "physically nonnegative substrate concentration; supplied observations follow the declared noise model",
+      "role": "state_to_evolve",
+      "member": "u",
+      "unit": "dimensionless"
+    }
+  ],
+  "units": "fixed nondimensional coordinates and fields, with explicit reference scales if dimensional interpretation is supplied",
+  "geometry": {
+    "axes": [
+      "x"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 6.283185307179586
+      }
+    }
+  },
+  "records": {
+    "count": 3,
+    "ids": [
+      "record_01",
+      "record_02",
+      "record_03"
+    ],
+    "relationship": "Separately prescribed preparations of the same fixed material and geometry; not independent random replicates.",
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  },
+  "observations": {
+    "path": "observations.npz",
+    "members": {
+      "time": {
+        "shape": [
+          129
+        ]
+      },
+      "x": {
+        "shape": [
+          128
+        ]
+      },
+      "u": {
+        "shape": [
+          3,
+          129,
+          128
+        ]
+      }
+    },
+    "measurement_noise": {
+      "added": true,
+      "kind": "iid Gaussian",
+      "relative_rms": 0.01,
+      "standard_deviation": {
+        "u": 0.00691408957419205
+      },
+      "clipping": false,
+      "control_histories_perturbed": false
+    },
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  },
+  "observation_precision": "Declared Gaussian readout noise; supplied coordinates and control programs remain exact."
+}

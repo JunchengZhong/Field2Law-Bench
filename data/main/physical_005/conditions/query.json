@@ -1,0 +1,58 @@
+{
+  "task_id": "physical_005",
+  "version": "physical_scenario_pilot_20261105_v2",
+  "release_stage": "After model and coefficients freeze",
+  "queries": [
+    {
+      "id": "predict_joint_loading",
+      "split": "hidden",
+      "physical_role": "Prepare unequal temperature loads in both layers before allowing passive cooling and internal redistribution.",
+      "initial": {
+        "kind": "layer_bumps",
+        "left_amplitude": 0.25,
+        "right_amplitude": 0.55
+      },
+      "controls": [
+        {
+          "kind": "zero"
+        },
+        {
+          "kind": "zero"
+        }
+      ]
+    },
+    {
+      "id": "predict_temporary_environment",
+      "split": "hidden",
+      "physical_role": "Expose the initially unheated assembly to a finite smooth warm-environment pulse, then return to reference ambient.",
+      "initial": {
+        "kind": "zero"
+      },
+      "controls": [
+        {
+          "kind": "zero"
+        },
+        {
+          "kind": "sin4_pulse",
+          "amplitude": 0.12,
+          "end_fraction": 0.75
+        }
+      ]
+    }
+  ],
+  "known_initial_formulas": {
+    "layer_bumps": "A_layer*256*s^4*(1-s)^4 with local s in each layer",
+    "zero": "0"
+  },
+  "known_control_formulas": {
+    "zero": "0",
+    "sin4_pulse": "A*sin(pi*t/(end_fraction*T))^4 for 0<=t<=end_fraction*T; 0 afterwards"
+  },
+  "T": 2.0,
+  "known_interface": 0.45,
+  "use": "Initial preparation and apparatus inputs only; no parameter fitting to query targets.",
+  "future_interior_supplied": false,
+  "known_conditions_file": "known_conditions.json",
+  "condition_representation": "Known continuous preparation/control definition; arrays are samples of that same definition.",
+  "condition_revision": "known_conditions_candidate_20261108_v3"
+}

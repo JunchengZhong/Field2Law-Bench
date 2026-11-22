@@ -1,0 +1,50 @@
+{
+  "task_id": "measured_piv_fixed_Re240",
+  "context": "The data are planar velocity measurements in a water-tunnel cylinder wake at nominal Reynolds number Re = 240. The two measured components U and V are supplied in m/s, with spatial coordinates in m and time in s. Pressure and out-of-plane motion are not observed. The supplied coordinates follow the source array rows and columns; the sign of V relative to increasing row coordinate has not been established.\n\nThe aim is to infer an effective evolution model for these two measured velocity components and predict their changes in another source window at the same Re. The new window provides its initial velocity field and measured boundary-strip histories; the target is the future interior velocity. The fitted model and parameters remain fixed. Exact two-dimensional incompressibility is not assumed for the observed fields.",
+  "units": {
+    "space": "m",
+    "time": "s",
+    "U,V": "m/s"
+  },
+  "field_axes": [
+    "time",
+    "row_n",
+    "column_s",
+    "channel"
+  ],
+  "channels": [
+    "U=source u_x",
+    "V=source u_y"
+  ],
+  "nominal_Re": 240,
+  "dt_s": 0.0625,
+  "observations": {
+    "path": "observations.npz",
+    "array_order": [
+      "time",
+      "row_n",
+      "column_s",
+      "channel"
+    ]
+  },
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "measured velocity component U",
+      "unit": "m/s",
+      "member": "u",
+      "channel_index": 0
+    },
+    {
+      "name": "v",
+      "meaning": "measured velocity component V",
+      "unit": "m/s",
+      "member": "u",
+      "channel_index": 1
+    }
+  ],
+  "evolved_fields": [
+    "u",
+    "v"
+  ]
+}

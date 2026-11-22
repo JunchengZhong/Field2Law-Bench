@@ -1,0 +1,59 @@
+{
+  "task_id": "physical_004",
+  "version": "physical_scenario_pilot_20261105_v2",
+  "release_stage": "After model and coefficients freeze",
+  "queries": [
+    {
+      "id": "predict_moved_heater",
+      "split": "hidden",
+      "physical_role": "Move the same heater profile 0.20 length units toward the right end; keep width and amplitude fixed.",
+      "initial": {
+        "kind": "compact_bump",
+        "amplitude": 0.45,
+        "left": 0.35,
+        "right": 0.95
+      },
+      "controls": [
+        {
+          "kind": "zero"
+        },
+        {
+          "kind": "zero"
+        }
+      ]
+    },
+    {
+      "id": "predict_right_warming",
+      "split": "hidden",
+      "physical_role": "Apply the same warming program at the right endpoint instead of the left, with unchanged material.",
+      "initial": {
+        "kind": "zero"
+      },
+      "controls": [
+        {
+          "kind": "zero"
+        },
+        {
+          "kind": "smooth_ramp_hold",
+          "amplitude": 0.1,
+          "rise_fraction": 0.5
+        }
+      ]
+    }
+  ],
+  "known_initial_formulas": {
+    "compact_bump": "amplitude*256*s^4*(1-s)^4 inside [left,right], zero outside; s=(x-left)/(right-left)",
+    "zero": "0"
+  },
+  "known_control_formulas": {
+    "zero": "0",
+    "smooth_ramp_hold": "A*S(min(t/(rise_fraction*T),1)); S(z)=10z^3-15z^4+6z^5"
+  },
+  "T": 1.0,
+  "known_interface": null,
+  "use": "Initial preparation and apparatus inputs only; no parameter fitting to query targets.",
+  "future_interior_supplied": false,
+  "known_conditions_file": "known_conditions.json",
+  "condition_representation": "Known continuous preparation/control definition; arrays are samples of that same definition.",
+  "condition_revision": "known_conditions_candidate_20261108_v3"
+}

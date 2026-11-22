@@ -1,0 +1,40 @@
+{
+  "task_id": "case_b80fa6524bae2a1b",
+  "context": "The simulations describe a closed binary mixture at fixed temperature in a one-dimensional periodic domain. The signed field u is a nondimensional composition difference. Total composition is conserved, while local segregation competes with interfacial smoothing. Only the composition field is observed; chemical potential is not measured. Two initial mixtures, one nearly balanced and one with a moderate mean composition bias, have different spatial perturbations. Their evolution is supplied without added measurement noise.\n\nThe constitutive response and evolution law are unknown. Infer a model that predicts the composition field from other prescribed mean compositions and spatial perturbations. Temperature, material and mobility regime remain unchanged, and the inferred law and fitted parameters are held fixed.",
+  "fields": [
+    {
+      "name": "u",
+      "unit": "fixed nondimensional",
+      "role": "state_to_evolve"
+    }
+  ],
+  "evolved_fields": [
+    "u"
+  ],
+  "geometry": {
+    "axes": [
+      "x"
+    ]
+  },
+  "boundary": {
+    "type": "periodic",
+    "axes": [
+      "x"
+    ],
+    "periods": {
+      "x": 6.283185307179586
+    }
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 2,
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ],
+    "measurement_noise": {
+      "added": false
+    }
+  }
+}

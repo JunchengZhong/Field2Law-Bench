@@ -1,0 +1,18 @@
+{
+  "schema": "field2law.physical_purpose_query.v2",
+  "task_id": "case_19bdbc1872905696",
+  "conditions_file": "conditions.npz",
+  "release_stage": "after model and coefficients freeze",
+  "records": [
+    {
+      "query_id": "query_1",
+      "physical_role": "Change the waveform phases and amplitude while remaining in the linear regime."
+    },
+    {
+      "query_id": "query_2",
+      "physical_role": "Use a broader spatial-frequency preparation in the same fixed medium."
+    }
+  ],
+  "same_dynamics": "The material, constitutive response and geometry remain unchanged. Only the declared initial preparation changes.",
+  "initial_representation": "Exact band-limited periodic preparation samples, using Fourier interpolation."
+}

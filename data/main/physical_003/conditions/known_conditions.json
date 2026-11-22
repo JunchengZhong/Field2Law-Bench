@@ -1,0 +1,26 @@
+{
+  "schema": "field2law.known_query_conditions.v1",
+  "information": "known preparation and actuator settings only",
+  "release_stage": "after model and coefficients freeze",
+  "records": [
+    {
+      "initial": {
+        "kind": "cosine",
+        "mean": 1.4,
+        "a": 0.35,
+        "b": 0.12
+      }
+    },
+    {
+      "initial": {
+        "kind": "cosine",
+        "mean": 1,
+        "a": -0.35,
+        "b": 0.12
+      }
+    }
+  ],
+  "sampled_arrays": "retained exact samples of the same conditions, for display and compatibility",
+  "unknown_material_coefficients_included": false,
+  "governing_equation_included": false
+}

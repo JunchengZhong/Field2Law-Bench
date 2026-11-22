@@ -1,0 +1,1984 @@
+{
+  "schema": "field2law.public-catalog.v1",
+  "release": "0.1.0-preview",
+  "date": "2026-11-22",
+  "status": "public data and task preview; external expert review arranged",
+  "counts": {
+    "main": 33,
+    "synthetic": 28,
+    "measured": 5,
+    "noise_controls": 5,
+    "difficulty": {
+      "M": 11,
+      "H": 13,
+      "E": 9
+    }
+  },
+  "evaluation_targets_included": false,
+  "reference_laws_included": false,
+  "tasks": [
+    {
+      "id": "diffusion_p1_01",
+      "panel": "main",
+      "title": "Concentration-dependent planar diffusion",
+      "title_zh": "浓度依赖的二维扩散",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/diffusion_p1_01/discovery",
+      "conditions_path": "data/main/diffusion_p1_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_7c30663b5e1fe1",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            41
+          ],
+          "dtype": "float64",
+          "sha256": "ae2f1cc4ff8d65d28e974a38952eaf248ed39e27538cc2719a6fcd72117e1a60"
+        },
+        "x": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "f550c38ade6efe71167db735ded269e53ad46121b4ba7d70e3404d803f0d53d6"
+        },
+        "y": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "f550c38ade6efe71167db735ded269e53ad46121b4ba7d70e3404d803f0d53d6"
+        },
+        "u": {
+          "shape": [
+            2,
+            41,
+            33,
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "cfbc25ade5b5cfa2ffda1e056c2ba5aa140c084b660e3ad1fee62b8ad0d80c2a"
+        }
+      }
+    },
+    {
+      "id": "pattern_stable_r01",
+      "panel": "main",
+      "title": "Decay of nonlinear spatial perturbations",
+      "title_zh": "高阶平滑下的非线性扰动衰减",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/pattern_stable_r01/discovery",
+      "conditions_path": "data/main/pattern_stable_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_a3137213390b22",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            513
+          ],
+          "dtype": "float64",
+          "sha256": "f3ab008841cd9b2a2f830a23bc444061285e201af1b776b8fc80c69e678c70cb"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "90e9f7b8af02a6236f08f181775c506675dd1b7faabf279e14319190f3c769c8"
+        },
+        "u": {
+          "shape": [
+            2,
+            513,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "9755e7d155343b0476a154ed1c9a488dbd5d508d52a2005a7f844d840b4c9366"
+        }
+      }
+    },
+    {
+      "id": "pattern_unstable_r01",
+      "panel": "main",
+      "title": "Competing long-wave growth and short-wave smoothing",
+      "title_zh": "长波增长与短波平滑的竞争",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/main/pattern_unstable_r01/discovery",
+      "conditions_path": "data/main/pattern_unstable_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_92195c948e2e9e",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            513
+          ],
+          "dtype": "float64",
+          "sha256": "f3ab008841cd9b2a2f830a23bc444061285e201af1b776b8fc80c69e678c70cb"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "90e9f7b8af02a6236f08f181775c506675dd1b7faabf279e14319190f3c769c8"
+        },
+        "u": {
+          "shape": [
+            3,
+            513,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "41fc6d32330ff6fa107e48f38217deae814828e0f6e9441af59d72029260a16c"
+        }
+      }
+    },
+    {
+      "id": "reaction_second_r01",
+      "panel": "main",
+      "title": "Concentration-dependent consumption",
+      "title_zh": "浓度依赖的二阶消耗",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/reaction_second_r01/discovery",
+      "conditions_path": "data/main/reaction_second_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_69e85bce148110",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "cd46a4aca05ddc49967cf8bd7e8f8ec9da85ace6427b605c7829265d51019993"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            2,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "0ec0c60afdd0e95ced447257801faf9736d7a84299db60a36a8e2d3001267e89"
+        }
+      }
+    },
+    {
+      "id": "saturation_hyperbolic_r01",
+      "panel": "main",
+      "title": "Saturating consumption with a linear dilute response",
+      "title_zh": "低浓度近线性的饱和消耗",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/saturation_hyperbolic_r01/discovery",
+      "conditions_path": "data/main/saturation_hyperbolic_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_b9ee529eb4991b",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "6d4167e9b482299936cf888faa67013fb6b1a6eec550ff99d8c51e59df5f2f21"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            3,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "cb576383ca276d109df7d7c546a6e7f18676b4477b6a852619d5524347863026"
+        }
+      }
+    },
+    {
+      "id": "saturation_sigmoidal_r01",
+      "panel": "main",
+      "title": "Saturating consumption with a suppressed dilute response",
+      "title_zh": "低浓度受抑制的饱和消耗",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/saturation_sigmoidal_r01/discovery",
+      "conditions_path": "data/main/saturation_sigmoidal_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_226a009fa2488b",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "6d4167e9b482299936cf888faa67013fb6b1a6eec550ff99d8c51e59df5f2f21"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            3,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "6c5d20d39b03a63790b8ff86da6edee2f66f7b77a3a957a1e75687373ce0d3f6"
+        }
+      }
+    },
+    {
+      "id": "transport_affine_r01",
+      "panel": "main",
+      "title": "Density-dependent transport",
+      "title_zh": "密度依赖的连续输运",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/transport_affine_r01/discovery",
+      "conditions_path": "data/main/transport_affine_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_19b078d4160f23",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "cd46a4aca05ddc49967cf8bd7e8f8ec9da85ace6427b605c7829265d51019993"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            2,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "b6262f8cb3c69d4ec5224c0fb2934734b7f6725849c329c022d5095f55c4eead"
+        }
+      }
+    },
+    {
+      "id": "wave_kdv_r01",
+      "panel": "main",
+      "title": "Weakly nonlinear dispersive waves",
+      "title_zh": "弱非线性弥散波",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/wave_kdv_r01/discovery",
+      "conditions_path": "data/main/wave_kdv_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_6e5a2832945cfd",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "6d4167e9b482299936cf888faa67013fb6b1a6eec550ff99d8c51e59df5f2f21"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            3,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "283290efca0a9d2e98f2b292da4ff70f5030c551136853a32230e073d7bbff1e"
+        }
+      }
+    },
+    {
+      "id": "annular_heat_01",
+      "panel": "main",
+      "title": "Boundary heating of a plate with a hole",
+      "title_zh": "带孔薄板的边界加热",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/annular_heat_01/discovery",
+      "conditions_path": "data/main/annular_heat_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_28502eb26383b7d2",
+      "observation_arrays": {
+        "nodes": {
+          "shape": [
+            1088,
+            2
+          ],
+          "dtype": "float64",
+          "sha256": "d529785a936f29a75b697950f9b3832090341f44e9233fa55c33b85beb6580d6"
+        },
+        "triangles": {
+          "shape": [
+            2048,
+            3
+          ],
+          "dtype": "int32",
+          "sha256": "e7a3dfe3829d481a2dc23beea3f7ed40f305de2f831876ad60c03bdd700e3198"
+        },
+        "boundary_tags": {
+          "shape": [
+            1088
+          ],
+          "dtype": "int8",
+          "sha256": "4d487512105613676bb6f9789466c6bc95157bb5895c276d027bd44e95f07d9d"
+        },
+        "time": {
+          "shape": [
+            41
+          ],
+          "dtype": "float64",
+          "sha256": "ae2f1cc4ff8d65d28e974a38952eaf248ed39e27538cc2719a6fcd72117e1a60"
+        },
+        "u": {
+          "shape": [
+            1,
+            41,
+            1088
+          ],
+          "dtype": "float64",
+          "sha256": "83e0e6dcde4ed37c78af3c09088a8c5e601e82ae5bfbc408d452492a42ee3659"
+        }
+      }
+    },
+    {
+      "id": "autocatalysis_bimolecular_r01",
+      "panel": "main",
+      "title": "Two-species autocatalytic feedback",
+      "title_zh": "双组分自催化反馈",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/main/autocatalysis_bimolecular_r01/discovery",
+      "conditions_path": "data/main/autocatalysis_bimolecular_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_25f95d5e132f5612",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "cd46a4aca05ddc49967cf8bd7e8f8ec9da85ace6427b605c7829265d51019993"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            2,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "9201176be6227cc87c2ff8fa831e4c753b7f7f6adb34f4c322c70452eaed27a4"
+        },
+        "v": {
+          "shape": [
+            2,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "a478cab10ce4e13fb5b703fe0879aefd9c12a6a3816db0d90ea880bb53a55f04"
+        }
+      }
+    },
+    {
+      "id": "diffusion_positive_diagonal_r01",
+      "panel": "main",
+      "title": "Planar heat transport along known material axes",
+      "title_zh": "已知主方向材料的平面导热",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/diffusion_positive_diagonal_r01/discovery",
+      "conditions_path": "data/main/diffusion_positive_diagonal_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_3e4a583975ae39d8",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            257
+          ],
+          "dtype": "float64",
+          "sha256": "08831556a9e7470806b6a3fee2ea3d6744502f694062326a630fbd3d8a3f339d"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "y": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            1,
+            257,
+            128,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "45413524dbdb1ee817cc5a2df3b40c12779483dfcabe5f53c5a67bd944d55697"
+        }
+      }
+    },
+    {
+      "id": "gray_scott_3d_01",
+      "panel": "main",
+      "title": "Three-dimensional two-species reaction and diffusion",
+      "title_zh": "三维双组分反应扩散",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/main/gray_scott_3d_01/discovery",
+      "conditions_path": "data/main/gray_scott_3d_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_c13757e1e9a76d12",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            24
+          ],
+          "dtype": "float64",
+          "sha256": "a8366aae0288347882a6cf0bbeecc89541f5dcd6ffa41a2a5e707040c33c751a"
+        },
+        "y": {
+          "shape": [
+            24
+          ],
+          "dtype": "float64",
+          "sha256": "a8366aae0288347882a6cf0bbeecc89541f5dcd6ffa41a2a5e707040c33c751a"
+        },
+        "z": {
+          "shape": [
+            24
+          ],
+          "dtype": "float64",
+          "sha256": "a8366aae0288347882a6cf0bbeecc89541f5dcd6ffa41a2a5e707040c33c751a"
+        },
+        "time": {
+          "shape": [
+            41
+          ],
+          "dtype": "float64",
+          "sha256": "3792049635061285f1450de2d23481c76ffb7286b2e6abd819b2fc1ce014adff"
+        },
+        "u": {
+          "shape": [
+            2,
+            41,
+            24,
+            24,
+            24
+          ],
+          "dtype": "float64",
+          "sha256": "824eb97ef43d24e6f80b14192cb6d98e808fde1469f17187beb2df60a3f4c1a9"
+        },
+        "v": {
+          "shape": [
+            2,
+            41,
+            24,
+            24,
+            24
+          ],
+          "dtype": "float64",
+          "sha256": "9ecf66fc2e6e572c9089b063d79db2e1fc5cec3dce0bf4892beda957a22bf1c7"
+        }
+      }
+    },
+    {
+      "id": "heat_3d_01",
+      "panel": "main",
+      "title": "Heating a three-dimensional body through its faces",
+      "title_zh": "三维材料的多面加热",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/heat_3d_01/discovery",
+      "conditions_path": "data/main/heat_3d_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_82b2901665676126",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "2270be3a84c8072f1ca8c6eff5dfe2d94244e3cd89b8655210ec9ca689eecaf2"
+        },
+        "y": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "2270be3a84c8072f1ca8c6eff5dfe2d94244e3cd89b8655210ec9ca689eecaf2"
+        },
+        "z": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "2270be3a84c8072f1ca8c6eff5dfe2d94244e3cd89b8655210ec9ca689eecaf2"
+        },
+        "time": {
+          "shape": [
+            41
+          ],
+          "dtype": "float64",
+          "sha256": "ae2f1cc4ff8d65d28e974a38952eaf248ed39e27538cc2719a6fcd72117e1a60"
+        },
+        "u": {
+          "shape": [
+            1,
+            41,
+            33,
+            33,
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "07fce43059ec83585cab2ece97fe749aa04b425c5b59c3a888ce2e97cf51b489"
+        }
+      }
+    },
+    {
+      "id": "kelvin_voigt_r01",
+      "panel": "main",
+      "title": "Small-amplitude waves in a viscoelastic medium",
+      "title_zh": "黏弹性介质中的小振幅波",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/kelvin_voigt_r01/discovery",
+      "conditions_path": "data/main/kelvin_voigt_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_e4fe81ad636246ce",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "f81fb38aba078adadd145ffac67347bcd7c9a58bd3f4c42b409ef7ee58d759f5"
+        },
+        "strain": {
+          "shape": [
+            1,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "87469ffd2d99177cbeb37ef8a55fe4e129bfa191eabaeb22e6e48d84bd3b2c4b"
+        },
+        "v": {
+          "shape": [
+            1,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "222338871d078ad4c4d17276d4ccde08d36c6cfa341c6d11c148c5bb4762c824"
+        }
+      }
+    },
+    {
+      "id": "maxwell_polarization_r01",
+      "panel": "main",
+      "title": "Polarized propagation in a dielectric medium",
+      "title_zh": "未知介电响应中的偏振传播",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/maxwell_polarization_r01/discovery",
+      "conditions_path": "data/main/maxwell_polarization_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_ce7715f130495eaa",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "f81fb38aba078adadd145ffac67347bcd7c9a58bd3f4c42b409ef7ee58d759f5"
+        },
+        "ey": {
+          "shape": [
+            1,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "5d6e49852abda297f1bfa23cf3a694133e4ab8e657a079d5f1e6f840348a0c83"
+        },
+        "ez": {
+          "shape": [
+            1,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "9f2991b435a722186dd021a1a38935c8b9df9887aca95bb4048df089c2a68c6e"
+        },
+        "hy": {
+          "shape": [
+            1,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "66dee44c34da973e19d529b3675ef8a4eebc8771768fd1d1b9da7cc67331ec17"
+        },
+        "hz": {
+          "shape": [
+            1,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "b6875f6cd4ec4c8c9902018f870df845f90285304e4b546b30ff15930c87a76d"
+        }
+      }
+    },
+    {
+      "id": "navier_stokes_vorticity_r01",
+      "panel": "main",
+      "title": "Planar vorticity transport",
+      "title_zh": "二维涡量输运",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/main/navier_stokes_vorticity_r01/discovery",
+      "conditions_path": "data/main/navier_stokes_vorticity_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_1ef563b71d89baa0",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "954842cbaee817b36be9b4b1c4e19e27338d01bbab816bc236db8a363ec7f307"
+        },
+        "x": {
+          "shape": [
+            64
+          ],
+          "dtype": "float64",
+          "sha256": "96586c6301a2d096cc7ef07713620777bed9947fdbefa8821afc8ea42d0946e1"
+        },
+        "y": {
+          "shape": [
+            64
+          ],
+          "dtype": "float64",
+          "sha256": "96586c6301a2d096cc7ef07713620777bed9947fdbefa8821afc8ea42d0946e1"
+        },
+        "omega": {
+          "shape": [
+            2,
+            129,
+            64,
+            64
+          ],
+          "dtype": "float64",
+          "sha256": "1177e10b74f9ae9c1a5856b700fdfde3200ee772291aedbba712e82b627d582a"
+        },
+        "u": {
+          "shape": [
+            2,
+            129,
+            64,
+            64
+          ],
+          "dtype": "float64",
+          "sha256": "4676e278fcb9ea31c219583325a75c536aefeb1cc1579ac5364421dda0aee93f"
+        },
+        "v": {
+          "shape": [
+            2,
+            129,
+            64,
+            64
+          ],
+          "dtype": "float64",
+          "sha256": "8c0df81edbc0d3d092c228bc8d2af2314961f4700e5a2a4d628979e4656f5e86"
+        }
+      }
+    },
+    {
+      "id": "physical_001",
+      "panel": "main",
+      "title": "Heat redistribution in a uniform insulated rod",
+      "title_zh": "均匀绝热杆的热量再分布",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/physical_001/discovery",
+      "conditions_path": "data/main/physical_001/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "physical_001",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "0f2668fbac1f1e4c035fbcde1c500f5fa1ce4473f7ca52379f775cb91edd44a7"
+        },
+        "t": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "sha256": "2d97dd2c2d94ed0b5ce6c902c0dcf2a41753796593ae2859ab77b0ba0c647bc3"
+        },
+        "u": {
+          "shape": [
+            1,
+            101,
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "8e3ccc07e1d12d8ff74d75c089f6cc35931b19dbaaa1dce6ef3877837e83aaef"
+        },
+        "boundary_history": {
+          "shape": [
+            1,
+            101,
+            0
+          ],
+          "dtype": "float64",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "record_ids": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U18",
+          "sha256": "7b48cf3c9c94e2076924037dd374a41626c27b093888924ca7669aff3caae110"
+        },
+        "control_names": {
+          "shape": [
+            0
+          ],
+          "dtype": "<U16",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "id": "physical_002",
+      "panel": "main",
+      "title": "Tracer transport in a circulating channel",
+      "title_zh": "循环通道中的示踪剂输运",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/physical_002/discovery",
+      "conditions_path": "data/main/physical_002/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "physical_002",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            80
+          ],
+          "dtype": "float64",
+          "sha256": "cad33caaf237197eba669f197ac3ea580915e7972997383b1963f25954500d8d"
+        },
+        "t": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "sha256": "2d97dd2c2d94ed0b5ce6c902c0dcf2a41753796593ae2859ab77b0ba0c647bc3"
+        },
+        "u": {
+          "shape": [
+            1,
+            101,
+            80
+          ],
+          "dtype": "float64",
+          "sha256": "c6b79a602da7006d7433ec7d3f06d46ff25572d08b618fc30b7a742f43fa9a80"
+        },
+        "boundary_history": {
+          "shape": [
+            1,
+            101,
+            0
+          ],
+          "dtype": "float64",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "record_ids": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U17",
+          "sha256": "4a7614f90b0218b2ab08d566f2fcae2f7d7b4fd96753d96ac45e350a21f215c8"
+        },
+        "control_names": {
+          "shape": [
+            0
+          ],
+          "dtype": "<U16",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "id": "physical_003",
+      "panel": "main",
+      "title": "First-order consumption in a closed medium",
+      "title_zh": "封闭介质中的一阶消耗",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/physical_003/discovery",
+      "conditions_path": "data/main/physical_003/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "physical_003",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "0f2668fbac1f1e4c035fbcde1c500f5fa1ce4473f7ca52379f775cb91edd44a7"
+        },
+        "t": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "sha256": "45a310e5517dd15c97912aadddef95b61a8cce44c8cf759919e712b03b775c0c"
+        },
+        "u": {
+          "shape": [
+            1,
+            101,
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "32bc638e84d3792d0824ffe676eed97377bc549dd554fbf92881b5f76bf45d04"
+        },
+        "boundary_history": {
+          "shape": [
+            1,
+            101,
+            0
+          ],
+          "dtype": "float64",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "record_ids": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U17",
+          "sha256": "b11e97d6663fb919e1716a60a1291750bcdb4f83e34c3e692b282812adda55b6"
+        },
+        "control_names": {
+          "shape": [
+            0
+          ],
+          "dtype": "<U16",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "id": "physical_004",
+      "panel": "main",
+      "title": "Heat transport through a graded material",
+      "title_zh": "渐变材料中的热输运",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/main/physical_004/discovery",
+      "conditions_path": "data/main/physical_004/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "physical_004",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "0f2668fbac1f1e4c035fbcde1c500f5fa1ce4473f7ca52379f775cb91edd44a7"
+        },
+        "t": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "sha256": "2d97dd2c2d94ed0b5ce6c902c0dcf2a41753796593ae2859ab77b0ba0c647bc3"
+        },
+        "u": {
+          "shape": [
+            2,
+            101,
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "2fc3e58476d7295443d6187f847431589ac36ebeb4de39149352e37ab3350dd4"
+        },
+        "boundary_history": {
+          "shape": [
+            2,
+            101,
+            2
+          ],
+          "dtype": "float64",
+          "sha256": "535cf2cebb365b085c2cec43de9bc0fb6f479d5e948e385ceb3a56920ac61367"
+        },
+        "record_ids": {
+          "shape": [
+            2
+          ],
+          "dtype": "<U24",
+          "sha256": "0c0e5648c76d7766fc416114ef13f747c897598faefb7596f67352ee6af14631"
+        },
+        "control_names": {
+          "shape": [
+            2
+          ],
+          "dtype": "<U16",
+          "sha256": "eb4ce6b7763f61b0daeac0e26103fab08d0ad435163076d5540e712b71265a5e"
+        }
+      }
+    },
+    {
+      "id": "physical_005",
+      "panel": "main",
+      "title": "Material interfaces and heat-exchange boundaries",
+      "title_zh": "材料界面与换热边界",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/main/physical_005/discovery",
+      "conditions_path": "data/main/physical_005/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "physical_005",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "0f2668fbac1f1e4c035fbcde1c500f5fa1ce4473f7ca52379f775cb91edd44a7"
+        },
+        "t": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "sha256": "45a310e5517dd15c97912aadddef95b61a8cce44c8cf759919e712b03b775c0c"
+        },
+        "u": {
+          "shape": [
+            3,
+            101,
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "cf9da4f8c93ce11557f4cbf339fa265f4df69705885d624835839815faca66f2"
+        },
+        "boundary_history": {
+          "shape": [
+            3,
+            101,
+            2
+          ],
+          "dtype": "float64",
+          "sha256": "f677fc5d1b54d820de285cd5702cb41b44bfee4f2171227634650b6e6163c32a"
+        },
+        "record_ids": {
+          "shape": [
+            3
+          ],
+          "dtype": "<U24",
+          "sha256": "fbae78c6f5e51adfbf2960e3cb245f7adb4dc77786a33b0d8acdb4f1986490ae"
+        },
+        "control_names": {
+          "shape": [
+            2
+          ],
+          "dtype": "<U16",
+          "sha256": "3be09f42e45a5580472af9856e0210c9d24cde362e76e69ce4b31bb634372589"
+        }
+      }
+    },
+    {
+      "id": "measured_cells_loading",
+      "panel": "main",
+      "title": "PC3 scratch-assay density recovery",
+      "title_zh": "PC3 细胞密度恢复",
+      "difficulty": "H",
+      "origin": "measured",
+      "public_path": "data/main/measured_cells_loading/discovery",
+      "conditions_path": "data/main/measured_cells_loading/conditions",
+      "data_access": "author_source",
+      "external_source": "pc3",
+      "data_license": "source_terms",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "measured_cells_loading",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            37
+          ],
+          "dtype": "float64",
+          "sha256": "3d75a639e372ac68e65a6eef89192a3e7dbe0ad4206f3af8ff7552848e3461a0"
+        },
+        "time": {
+          "shape": [
+            5
+          ],
+          "dtype": "float64",
+          "sha256": "abc2d78aa1879c72840ad779139f80702643ba3c3ccb74862eae91373fb648cf"
+        },
+        "u": {
+          "shape": [
+            12,
+            5,
+            37
+          ],
+          "dtype": "float64",
+          "sha256": "70a1508933e7630634940f259c09dd4c0cd95238f606011aa8941f658be27e77"
+        }
+      }
+    },
+    {
+      "id": "measured_piv_fixed_Re240",
+      "panel": "main",
+      "title": "Measured cylinder-wake velocities at Re = 240",
+      "title_zh": "圆柱尾流 PIV（Re=240）",
+      "difficulty": "H",
+      "origin": "measured",
+      "public_path": "data/main/measured_piv_fixed_Re240/discovery",
+      "conditions_path": "data/main/measured_piv_fixed_Re240/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "measured_piv_fixed_Re240",
+      "observation_arrays": {
+        "u": {
+          "shape": [
+            100,
+            89,
+            133,
+            2
+          ],
+          "dtype": "float64",
+          "sha256": "e40d6fa826b218f98b75b8f10fd2f4ab0fe122e12e2cfa499b016676198c4f88"
+        },
+        "t": {
+          "shape": [
+            100
+          ],
+          "dtype": "float64",
+          "sha256": "40880a8b9aaef923050fd9e91c62031d481d4f144cc4533096b17f2078ff3b38"
+        },
+        "s": {
+          "shape": [
+            133
+          ],
+          "dtype": "float64",
+          "sha256": "301be47c3fc0347b1e97bbf05f84cd53bfc58c6ff10c15f131c9242ea758c087"
+        },
+        "n": {
+          "shape": [
+            89
+          ],
+          "dtype": "float64",
+          "sha256": "ee64c5020a1890f5cedd92884e2c0a19bea19e9d7db02e5264cfadcd5b8da8ed"
+        },
+        "valid": {
+          "shape": [
+            100,
+            89,
+            133
+          ],
+          "dtype": "bool",
+          "sha256": "16a03e162b676c1270b1ca20a6a632310e3f4503241cbed2d127a925b799619f"
+        },
+        "source_frame_index": {
+          "shape": [
+            100
+          ],
+          "dtype": "int64",
+          "sha256": "96bdba67cd0b5e6dc0f9e399f66b17eae627eac812d0620119e87687d789546a"
+        }
+      }
+    },
+    {
+      "id": "measured_piv_fixed_Re910",
+      "panel": "main",
+      "title": "Measured cylinder-wake velocities at Re = 910",
+      "title_zh": "圆柱尾流 PIV（Re=910）",
+      "difficulty": "H",
+      "origin": "measured",
+      "public_path": "data/main/measured_piv_fixed_Re910/discovery",
+      "conditions_path": "data/main/measured_piv_fixed_Re910/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "measured_piv_fixed_Re910",
+      "observation_arrays": {
+        "u": {
+          "shape": [
+            100,
+            89,
+            133,
+            2
+          ],
+          "dtype": "float64",
+          "sha256": "e867ef0321973d02af98fd6bab78efdc675e745a671eb02330f17020b4011474"
+        },
+        "t": {
+          "shape": [
+            100
+          ],
+          "dtype": "float64",
+          "sha256": "0f44d1f1659369df76aaeba656f6cce419890d3707e3d602485461a229f2171a"
+        },
+        "s": {
+          "shape": [
+            133
+          ],
+          "dtype": "float64",
+          "sha256": "301be47c3fc0347b1e97bbf05f84cd53bfc58c6ff10c15f131c9242ea758c087"
+        },
+        "n": {
+          "shape": [
+            89
+          ],
+          "dtype": "float64",
+          "sha256": "ee64c5020a1890f5cedd92884e2c0a19bea19e9d7db02e5264cfadcd5b8da8ed"
+        },
+        "valid": {
+          "shape": [
+            100,
+            89,
+            133
+          ],
+          "dtype": "bool",
+          "sha256": "16a03e162b676c1270b1ca20a6a632310e3f4503241cbed2d127a925b799619f"
+        },
+        "source_frame_index": {
+          "shape": [
+            100
+          ],
+          "dtype": "int64",
+          "sha256": "96bdba67cd0b5e6dc0f9e399f66b17eae627eac812d0620119e87687d789546a"
+        }
+      }
+    },
+    {
+      "id": "measured_piv_fixed_Re2520",
+      "panel": "main",
+      "title": "Measured cylinder-wake velocities at Re = 2520",
+      "title_zh": "圆柱尾流 PIV（Re=2520）",
+      "difficulty": "H",
+      "origin": "measured",
+      "public_path": "data/main/measured_piv_fixed_Re2520/discovery",
+      "conditions_path": "data/main/measured_piv_fixed_Re2520/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "measured_piv_fixed_Re2520",
+      "observation_arrays": {
+        "u": {
+          "shape": [
+            100,
+            89,
+            133,
+            2
+          ],
+          "dtype": "float64",
+          "sha256": "0cf45c03b10cb1da469fb3c165fe27cb8f69d7fecd5604aacc1d596d191533f7"
+        },
+        "t": {
+          "shape": [
+            100
+          ],
+          "dtype": "float64",
+          "sha256": "decfa236c33ed8391f70a227eebd2c99d7399edca0c945c851bbe342f763cc21"
+        },
+        "s": {
+          "shape": [
+            133
+          ],
+          "dtype": "float64",
+          "sha256": "301be47c3fc0347b1e97bbf05f84cd53bfc58c6ff10c15f131c9242ea758c087"
+        },
+        "n": {
+          "shape": [
+            89
+          ],
+          "dtype": "float64",
+          "sha256": "ee64c5020a1890f5cedd92884e2c0a19bea19e9d7db02e5264cfadcd5b8da8ed"
+        },
+        "valid": {
+          "shape": [
+            100,
+            89,
+            133
+          ],
+          "dtype": "bool",
+          "sha256": "16a03e162b676c1270b1ca20a6a632310e3f4503241cbed2d127a925b799619f"
+        },
+        "source_frame_index": {
+          "shape": [
+            100
+          ],
+          "dtype": "int64",
+          "sha256": "96bdba67cd0b5e6dc0f9e399f66b17eae627eac812d0620119e87687d789546a"
+        }
+      }
+    },
+    {
+      "id": "acoustic_pulse_01",
+      "panel": "main",
+      "title": "Acoustic pulses in a uniform medium",
+      "title_zh": "均匀介质中的声脉冲",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/acoustic_pulse_01/discovery",
+      "conditions_path": "data/main/acoustic_pulse_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_a9cd6cc4b8744465",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            121
+          ],
+          "dtype": "float64",
+          "sha256": "15e3a48ba9fd76e3f4f11e1561dfe06e18d480acf9b0f5a3edc7dd830b42cd67"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "p": {
+          "shape": [
+            1,
+            121,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "ec9e08c19f9d88a91f39effd4cc14b1ba7c085f5d460560b43d8b168f2f6b28d"
+        },
+        "v": {
+          "shape": [
+            1,
+            121,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "147fcfe8ca3ffe17532c6e0f6c018cd3e880782da027862db08213f3d354fffa"
+        }
+      }
+    },
+    {
+      "id": "linear_dispersion_01",
+      "panel": "main",
+      "title": "Linear dispersion of small-amplitude waves",
+      "title_zh": "小振幅波的线性弥散",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/linear_dispersion_01/discovery",
+      "conditions_path": "data/main/linear_dispersion_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_19bdbc1872905696",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "ee566e61c621dea1a3e1f96fa80eac38e2066ad3f5f86657495c9b0481bb39a0"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            1,
+            81,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "963a02457ff91a721e77b60be3cfe89c8220c45718e747c6f5f87d36b7f37c22"
+        }
+      }
+    },
+    {
+      "id": "planar_cooling_01",
+      "panel": "main",
+      "title": "Boundary cooling of a uniform plate",
+      "title_zh": "均匀薄板的边缘冷却",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/planar_cooling_01/discovery",
+      "conditions_path": "data/main/planar_cooling_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_c903b9ec04265067",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            41
+          ],
+          "dtype": "float64",
+          "sha256": "ae2f1cc4ff8d65d28e974a38952eaf248ed39e27538cc2719a6fcd72117e1a60"
+        },
+        "x": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "2270be3a84c8072f1ca8c6eff5dfe2d94244e3cd89b8655210ec9ca689eecaf2"
+        },
+        "y": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "2270be3a84c8072f1ca8c6eff5dfe2d94244e3cd89b8655210ec9ca689eecaf2"
+        },
+        "u": {
+          "shape": [
+            1,
+            41,
+            33,
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "d55c1a128fbefd8f0ffae8b37b7c5aace27e8b84f77fe69565befdb3ee896a6d"
+        }
+      }
+    },
+    {
+      "id": "species_exchange_01",
+      "panel": "main",
+      "title": "Reversible exchange between two species",
+      "title_zh": "封闭体系中的可逆组分交换",
+      "difficulty": "E",
+      "origin": "synthetic",
+      "public_path": "data/main/species_exchange_01/discovery",
+      "conditions_path": "data/main/species_exchange_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_9941761f40393f82",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "fc793128acff47524822befc31c03bdf44264e8fb7c7d1caeb9ea7b4d880be60"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            2,
+            81,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "6a56a5a133aaa56d1dccfa25986a85cb8696038dff80e637ede8ba5458852c44"
+        },
+        "v": {
+          "shape": [
+            2,
+            81,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "ead2cfffa9425cae2be66d298f61cb74a5d99ffb654d7f383b3f4c75122aba13"
+        }
+      }
+    },
+    {
+      "id": "phase_separation_01",
+      "panel": "main",
+      "title": "Phase separation in a closed mixture",
+      "title_zh": "封闭混合物中的相分离",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/main/phase_separation_01/discovery",
+      "conditions_path": "data/main/phase_separation_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_b80fa6524bae2a1b",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            121
+          ],
+          "dtype": "float64",
+          "sha256": "0394df3df741ee0d14037a3cc71d8a7b81d4da0486c1ff7fe2f683e68cd16218"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            2,
+            121,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "eb8ca18e9118b84abf9f82388d4ca090266bb567eadf818f15f7b7e744cc20cc"
+        }
+      }
+    },
+    {
+      "id": "shallow_water_01",
+      "panel": "main",
+      "title": "Free-surface gravity waves in shallow water",
+      "title_zh": "浅水介质中的自由表面重力波",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/main/shallow_water_01/discovery",
+      "conditions_path": "data/main/shallow_water_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_7971274a508704a5",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            61
+          ],
+          "dtype": "float64",
+          "sha256": "7ef8869f9663bf72148c580d68d0e0342ae52d83fee4492a5c0f203092c831ab"
+        },
+        "x": {
+          "shape": [
+            32
+          ],
+          "dtype": "float64",
+          "sha256": "6d25e94d38926fa48f1c5750d9413fb168fa5f17e53173a434a373defe2c8970"
+        },
+        "y": {
+          "shape": [
+            32
+          ],
+          "dtype": "float64",
+          "sha256": "6d25e94d38926fa48f1c5750d9413fb168fa5f17e53173a434a373defe2c8970"
+        },
+        "h": {
+          "shape": [
+            2,
+            61,
+            32,
+            32
+          ],
+          "dtype": "float64",
+          "sha256": "b699970348acaeb8b1381c942e478bb9958c4714872af9e47e4e53d24fd3dca1"
+        },
+        "u": {
+          "shape": [
+            2,
+            61,
+            32,
+            32
+          ],
+          "dtype": "float64",
+          "sha256": "54d2668b3e7dd5c9d11fae715bf868f44b564c48d3b287947462261e77cae266"
+        },
+        "v": {
+          "shape": [
+            2,
+            61,
+            32,
+            32
+          ],
+          "dtype": "float64",
+          "sha256": "4b43c23515f79a3dcc7f8b986580e5948fd6a7cf7d02c4937ac9df9391c73d23"
+        }
+      }
+    },
+    {
+      "id": "excitable_recovery_01",
+      "panel": "main",
+      "title": "Activation and recovery in an excitable medium",
+      "title_zh": "可激发介质中的激活与恢复",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/main/excitable_recovery_01/discovery",
+      "conditions_path": "data/main/excitable_recovery_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_4ce71860e9fcbf40",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            121
+          ],
+          "dtype": "float64",
+          "sha256": "72d85e05ba0f793b2bc8ed90255f6b1964ca11b755cae3ed10f7538d7f39c098"
+        },
+        "x": {
+          "shape": [
+            256
+          ],
+          "dtype": "float64",
+          "sha256": "1cfab664bff2e326d2923a6333025ab918321a60fef97aebc9dfece2c1b6fcab"
+        },
+        "u": {
+          "shape": [
+            2,
+            121,
+            256
+          ],
+          "dtype": "float64",
+          "sha256": "bda7c1bbbfa7a0aeafc5a239dcb80431a08e15a64cc446208ff9bededd88d09a"
+        },
+        "v": {
+          "shape": [
+            2,
+            121,
+            256
+          ],
+          "dtype": "float64",
+          "sha256": "7092aa1c0fa84fa7d3db16372a65c6b27efdd47ea9acd55cce2ad8b298cd589e"
+        }
+      }
+    },
+    {
+      "id": "measured_wave_window",
+      "panel": "main",
+      "title": "Measured wave-tank surface elevations",
+      "title_zh": "水槽聚焦波群的实测波面演化",
+      "difficulty": "H",
+      "origin": "measured",
+      "public_path": "data/main/measured_wave_window/discovery",
+      "conditions_path": "data/main/measured_wave_window/conditions",
+      "data_access": "author_source",
+      "external_source": "waves",
+      "data_license": "source_terms",
+      "annotation_license": "CC-BY-4.0",
+      "discovery_task_id": "case_a30a75a6a3467cf2",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            39
+          ],
+          "dtype": "float64",
+          "sha256": "336c5fb58f8653c6f0e12c04d51db7a28853bc91e33afd190b12e48c97b8274b"
+        },
+        "x": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "7280160c0ed572a59562e37018f10ad885dbf58ad28aedff210102d08d16f04a"
+        },
+        "u": {
+          "shape": [
+            1,
+            39,
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "59b9149c41807188c6e00850cc33a410342dbd2dbf5723f3d6e07752027b9305"
+        }
+      }
+    },
+    {
+      "id": "diffusion_p1_01",
+      "panel": "noise",
+      "title": "Concentration-dependent planar diffusion",
+      "title_zh": "浓度依赖的二维扩散",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/noise/diffusion_p1_01/discovery",
+      "conditions_path": "data/noise/diffusion_p1_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "paired_main_task": "diffusion_p1_01",
+      "discovery_task_id": "case_7c30663b5e1fe1",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            41
+          ],
+          "dtype": "float64",
+          "sha256": "ae2f1cc4ff8d65d28e974a38952eaf248ed39e27538cc2719a6fcd72117e1a60"
+        },
+        "x": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "f550c38ade6efe71167db735ded269e53ad46121b4ba7d70e3404d803f0d53d6"
+        },
+        "y": {
+          "shape": [
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "f550c38ade6efe71167db735ded269e53ad46121b4ba7d70e3404d803f0d53d6"
+        },
+        "u": {
+          "shape": [
+            2,
+            41,
+            33,
+            33
+          ],
+          "dtype": "float64",
+          "sha256": "d474f8089c3ba2096d7a7dcc59a6076dbe934e1602b7af1417bb7da14edd371d"
+        }
+      }
+    },
+    {
+      "id": "saturation_hyperbolic_r01",
+      "panel": "noise",
+      "title": "Saturating consumption with a linear dilute response",
+      "title_zh": "低浓度近线性的饱和消耗",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/noise/saturation_hyperbolic_r01/discovery",
+      "conditions_path": "data/noise/saturation_hyperbolic_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "paired_main_task": "saturation_hyperbolic_r01",
+      "discovery_task_id": "case_b9ee529eb4991b",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "6d4167e9b482299936cf888faa67013fb6b1a6eec550ff99d8c51e59df5f2f21"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            3,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "092a6009a967f2f996ee98d085ef75ced95174fe33a599c46f6911fdff543c5b"
+        }
+      }
+    },
+    {
+      "id": "saturation_sigmoidal_r01",
+      "panel": "noise",
+      "title": "Saturating consumption with a suppressed dilute response",
+      "title_zh": "低浓度受抑制的饱和消耗",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/noise/saturation_sigmoidal_r01/discovery",
+      "conditions_path": "data/noise/saturation_sigmoidal_r01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "paired_main_task": "saturation_sigmoidal_r01",
+      "discovery_task_id": "case_226a009fa2488b",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            129
+          ],
+          "dtype": "float64",
+          "sha256": "6d4167e9b482299936cf888faa67013fb6b1a6eec550ff99d8c51e59df5f2f21"
+        },
+        "x": {
+          "shape": [
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "2d5f481015930be9c3b131c36bf0f536728672b12c9bdc7be9fdc3b27c9d4743"
+        },
+        "u": {
+          "shape": [
+            3,
+            129,
+            128
+          ],
+          "dtype": "float64",
+          "sha256": "db07485b5788ae9e920f9f9c67f170dfacddbd66064247952530b3b835321d40"
+        }
+      }
+    },
+    {
+      "id": "physical_004",
+      "panel": "noise",
+      "title": "Heat transport through a graded material",
+      "title_zh": "渐变材料中的热输运",
+      "difficulty": "M",
+      "origin": "synthetic",
+      "public_path": "data/noise/physical_004/discovery",
+      "conditions_path": "data/noise/physical_004/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "paired_main_task": "physical_004",
+      "discovery_task_id": "physical_004",
+      "observation_arrays": {
+        "x": {
+          "shape": [
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "0f2668fbac1f1e4c035fbcde1c500f5fa1ce4473f7ca52379f775cb91edd44a7"
+        },
+        "t": {
+          "shape": [
+            101
+          ],
+          "dtype": "float64",
+          "sha256": "2d97dd2c2d94ed0b5ce6c902c0dcf2a41753796593ae2859ab77b0ba0c647bc3"
+        },
+        "u": {
+          "shape": [
+            2,
+            101,
+            81
+          ],
+          "dtype": "float64",
+          "sha256": "7a14a21b7ebcc9a2fb0d56c9fbef11b0e7ba9ce4843ae242088631a12e45a912"
+        },
+        "boundary_history": {
+          "shape": [
+            2,
+            101,
+            2
+          ],
+          "dtype": "float64",
+          "sha256": "535cf2cebb365b085c2cec43de9bc0fb6f479d5e948e385ceb3a56920ac61367"
+        },
+        "record_ids": {
+          "shape": [
+            2
+          ],
+          "dtype": "<U24",
+          "sha256": "0c0e5648c76d7766fc416114ef13f747c897598faefb7596f67352ee6af14631"
+        },
+        "control_names": {
+          "shape": [
+            2
+          ],
+          "dtype": "<U16",
+          "sha256": "eb4ce6b7763f61b0daeac0e26103fab08d0ad435163076d5540e712b71265a5e"
+        }
+      }
+    },
+    {
+      "id": "excitable_recovery_01",
+      "panel": "noise",
+      "title": "Activation and recovery in an excitable medium",
+      "title_zh": "可激发介质中的激活与恢复",
+      "difficulty": "H",
+      "origin": "synthetic",
+      "public_path": "data/noise/excitable_recovery_01/discovery",
+      "conditions_path": "data/noise/excitable_recovery_01/conditions",
+      "data_access": "included",
+      "external_source": null,
+      "data_license": "CC-BY-4.0",
+      "annotation_license": "CC-BY-4.0",
+      "paired_main_task": "excitable_recovery_01",
+      "discovery_task_id": "case_4ce71860e9fcbf40",
+      "observation_arrays": {
+        "time": {
+          "shape": [
+            121
+          ],
+          "dtype": "float64",
+          "sha256": "72d85e05ba0f793b2bc8ed90255f6b1964ca11b755cae3ed10f7538d7f39c098"
+        },
+        "x": {
+          "shape": [
+            256
+          ],
+          "dtype": "float64",
+          "sha256": "1cfab664bff2e326d2923a6333025ab918321a60fef97aebc9dfece2c1b6fcab"
+        },
+        "u": {
+          "shape": [
+            2,
+            121,
+            256
+          ],
+          "dtype": "float64",
+          "sha256": "2a4fdd67628ad4d4c076d7816c763fe16335bcc68bf51d3245c8dc32b1324445"
+        },
+        "v": {
+          "shape": [
+            2,
+            121,
+            256
+          ],
+          "dtype": "float64",
+          "sha256": "1cae9d172bf8d3c413acfe694fe405c52f17e73c6cf07122e6ccaee529fa6ab0"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "task_id": "case_92195c948e2e9e",
+  "context": "These simulations examine spatial stability after a nonuniform preparation of an idealized one-dimensional continuum. The monitored scalar state is expressed as a dimensionless departure u from a fixed uniform reference value: u = 0 denotes the reference state, and positive or negative values denote local deviations above or below it. The periodic domain represents a repeating segment, with spatially uniform system settings and no external forcing during observation. Three zero-mean initial disturbances contain shorter wavelengths, longer wavelengths, and a mixture of spatial scales. The resulting fields are supplied without added measurement noise, using a common coordinate origin and fixed scales.\n\nThe objective is to infer a continuum evolution law for these departures and predict how new initial disturbances redistribute across space and change in amplitude over the requested interval. This tests whether the inferred dynamics transfer across different prepared wavelengths and mixtures of spatial scales. The system settings remain unchanged, and the inferred law and fitted parameters are held fixed for all predictions.",
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "dimensionless local departure of the monitored scalar state from its uniform reference value",
+      "role": "state_to_evolve",
+      "member": "u",
+      "unit": "dimensionless"
+    }
+  ],
+  "units": "fixed nondimensional coordinates and fields, with explicit reference scales if dimensional interpretation is supplied",
+  "geometry": {
+    "axes": [
+      "x"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 50.26548245743669
+      }
+    }
+  },
+  "records": {
+    "count": 3,
+    "ids": [
+      "record_01",
+      "record_02",
+      "record_03"
+    ],
+    "relationship": "Separately prescribed preparations of the same fixed material and geometry; not independent random replicates.",
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  },
+  "observations": {
+    "path": "observations.npz",
+    "members": {
+      "time": {
+        "shape": [
+          513
+        ]
+      },
+      "x": {
+        "shape": [
+          128
+        ]
+      },
+      "u": {
+        "shape": [
+          3,
+          513,
+          128
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "clipped": false
+    },
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "physical_003",
+  "context": "The simulations follow a dissolved species in a sealed, homogeneous channel with a stationary medium. The field u is its concentration. A spatially uniform depletion process acts under a fixed environment, and there is no replenishment. No species crosses either endpoint, although internal depletion can change the total amount. Concentration profiles are observed after a nonuniform initial dose, without added measurement noise and using fixed nondimensional scales.\n\nThe reaction law and all rates are unknown. The aim is to infer an evolution law that describes both depletion and spatial redistribution, then predict other initial doses and loading arrangements in the same channel. The inferred law and fitted parameters remain fixed.",
+  "field": {
+    "name": "u",
+    "units": "nondimensional",
+    "observation_type": "scalar field"
+  },
+  "coordinates": {
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "space": "x",
+    "time": "t",
+    "units": "nondimensional",
+    "grid": "Uniform observed nodes including both endpoints."
+  },
+  "boundary": {
+    "type": "no_flux",
+    "meaning": "No species crosses either endpoint; internal depletion may change total amount."
+  },
+  "records": [
+    {
+      "case_id": "observe_depletion",
+      "role": "Observe simultaneous reactant depletion and redistribution following a nonuniform dose."
+    }
+  ],
+  "data_axes": {
+    "u": [
+      "record",
+      "time",
+      "space"
+    ],
+    "boundary_history": [
+      "record",
+      "time",
+      "control"
+    ]
+  },
+  "observation_precision": "No added sensor noise.",
+  "observations": {
+    "path": "observations.npz",
+    "array_order": [
+      "record",
+      "time",
+      "space"
+    ]
+  }
+}

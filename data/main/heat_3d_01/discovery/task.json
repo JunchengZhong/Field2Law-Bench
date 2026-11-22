@@ -1,0 +1,98 @@
+{
+  "task_id": "case_82b2901665676126",
+  "context": "The simulations describe temperature redistribution in a homogeneous solid cube of side 0.1 m, with no internal heat source and prescribed temperatures on all six faces. The field u is temperature departure from 293.15 K. Length, time and temperature departure are scaled by 0.1 m, 100 s and 10 K, respectively. A nonuniform initial temperature field varies along several spatial directions. Its cooling is observed while all six faces remain at the reference temperature, without added measurement noise.\n\nThe task is to infer the material temperature evolution law and predict the interior temperature for new initial heating distributions and prescribed time-dependent face temperatures. The cube and material stay the same, and the inferred law and fitted parameters remain fixed throughout these predictions.",
+  "fields": [
+    {
+      "name": "u",
+      "role": "state_to_evolve",
+      "meaning": "temperature departure",
+      "unit": "dimensionless"
+    }
+  ],
+  "evolved_fields": [
+    "u"
+  ],
+  "units": "x=X/(0.1m), y=Y/(0.1m), z=Z/(0.1m), t=t_phys/(100s), u=(T-293.15K)/(10K).",
+  "geometry": {
+    "type": "Cartesian_tensor_grid",
+    "dimension": 3,
+    "array_spatial_axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "boundary": {
+      "type": "six_prescribed_temperatures",
+      "face_order": [
+        "x_lower",
+        "x_upper",
+        "y_lower",
+        "y_upper",
+        "z_lower",
+        "z_upper"
+      ],
+      "discovery_value": 0.0
+    }
+  },
+  "boundary": {
+    "type": "six_prescribed_temperatures",
+    "face_order": [
+      "x_lower",
+      "x_upper",
+      "y_lower",
+      "y_upper",
+      "z_lower",
+      "z_upper"
+    ],
+    "discovery_value": 0.0
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 1,
+    "record_ids": [
+      "preparation_1"
+    ],
+    "array_order": [
+      "record",
+      "time",
+      "x",
+      "y",
+      "z"
+    ],
+    "members": {
+      "x": {
+        "shape": [
+          33
+        ]
+      },
+      "y": {
+        "shape": [
+          33
+        ]
+      },
+      "z": {
+        "shape": [
+          33
+        ]
+      },
+      "time": {
+        "shape": [
+          41
+        ]
+      },
+      "u": {
+        "shape": [
+          1,
+          41,
+          33,
+          33,
+          33
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "added": false
+    }
+  }
+}

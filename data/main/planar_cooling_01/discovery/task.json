@@ -1,0 +1,38 @@
+{
+  "task_id": "case_c903b9ec04265067",
+  "context": "The simulations describe an in-plane temperature model for a homogeneous, isotropic thin square plate. The field u is temperature departure from a fixed cold reservoir, and all four edges are held at the reference temperature. There is no advection or internal heating after preparation. The evolution of a prescribed positive, nonuniform initial temperature distribution is observed over the two-dimensional domain without added measurement noise, using fixed nondimensional scales.\n\nThe material response is unknown. The task is to infer a temperature evolution law and predict cooling from other initial temperature distributions while keeping the same edge temperatures. The plate, material and boundary setting are unchanged, and the inferred law and fitted parameters remain fixed.",
+  "fields": [
+    {
+      "name": "u",
+      "unit": "fixed nondimensional",
+      "role": "state_to_evolve"
+    }
+  ],
+  "evolved_fields": [
+    "u"
+  ],
+  "geometry": {
+    "axes": [
+      "x",
+      "y"
+    ]
+  },
+  "boundary": {
+    "type": "dirichlet",
+    "value": 0.0,
+    "meaning": "All four edges held at zero temperature departure."
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 1,
+    "array_order": [
+      "record",
+      "time",
+      "x",
+      "y"
+    ],
+    "measurement_noise": {
+      "added": false
+    }
+  }
+}

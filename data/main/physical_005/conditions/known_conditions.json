@@ -1,0 +1,23 @@
+{
+  "schema": "field2law.known_query_conditions.v1",
+  "information": "known preparation and actuator settings only",
+  "release_stage": "after model and coefficients freeze",
+  "records": [
+    {
+      "initial": {
+        "kind": "layer_bumps",
+        "left_amplitude": 0.25,
+        "right_amplitude": 0.55,
+        "interface": 0.45
+      }
+    },
+    {
+      "initial": {
+        "kind": "zero"
+      }
+    }
+  ],
+  "sampled_arrays": "retained exact samples of the same conditions, for display and compatibility",
+  "unknown_material_coefficients_included": false,
+  "governing_equation_included": false
+}

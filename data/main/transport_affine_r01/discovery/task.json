@@ -1,0 +1,69 @@
+{
+  "task_id": "case_19b078d4160f23",
+  "context": "The simulations describe traffic density on a closed ring using a continuum model. The nonnegative field u represents vehicle density. Vehicles move in one direction, with a speed that depends on density and an effective smoothing of spatial variations. There are no entrances, exits or sources of vehicles. Two positive initial density profiles have different mean loadings, and their subsequent evolution is observed without added measurement noise.\n\nThe goal is to infer the density evolution law and its constitutive response, then predict how new initial density distributions redistribute around the same ring. The ring geometry, coordinate and density scales, and underlying model parameters are unchanged across preparations. The inferred law and fitted parameters must therefore be used unchanged for the new loading conditions.",
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "physically nonnegative traffic density; supplied observations follow the declared noise model",
+      "role": "state_to_evolve",
+      "member": "u",
+      "unit": "dimensionless"
+    }
+  ],
+  "units": "fixed nondimensional coordinates and fields, with explicit reference scales if dimensional interpretation is supplied",
+  "geometry": {
+    "axes": [
+      "x"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 6.283185307179586
+      }
+    }
+  },
+  "records": {
+    "count": 2,
+    "ids": [
+      "record_01",
+      "record_02"
+    ],
+    "relationship": "Separately prescribed preparations of the same fixed material and geometry; not independent random replicates.",
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  },
+  "observations": {
+    "path": "observations.npz",
+    "members": {
+      "time": {
+        "shape": [
+          129
+        ]
+      },
+      "x": {
+        "shape": [
+          128
+        ]
+      },
+      "u": {
+        "shape": [
+          2,
+          129,
+          128
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "clipped": false
+    },
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ]
+  }
+}

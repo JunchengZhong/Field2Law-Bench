@@ -1,0 +1,164 @@
+{
+  "task_id": "case_ce7715f130495eaa",
+  "context": "The simulations describe transverse electromagnetic propagation along a periodic x coordinate in a homogeneous material. The electric components ey and ez and magnetic components hy and hz are observed in fixed laboratory axes. Over the frequency range considered, the material response is linear and instantaneous, losses are negligible, and magnetic permeability is a positive scalar. The dielectric response is unknown. The launch polarization is prescribed in the laboratory frame and does not identify the material principal axes.\n\nA transverse pulse containing several spatial wavelengths is observed after preparation, with no external drive or added measurement noise. The aim is to infer evolution laws for all four field components and predict other prescribed initial pulses and polarizations. The material and field scales remain fixed, and the fitted laws and parameters are reused without adjustment.",
+  "fields": [
+    {
+      "name": "ey",
+      "meaning": "transverse electric y component",
+      "role": "state_to_evolve",
+      "member": "ey",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "ez",
+      "meaning": "transverse electric z component",
+      "role": "state_to_evolve",
+      "member": "ez",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "hy",
+      "meaning": "transverse magnetic y component",
+      "role": "state_to_evolve",
+      "member": "hy",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "hz",
+      "meaning": "transverse magnetic z component",
+      "role": "state_to_evolve",
+      "member": "hz",
+      "unit": "dimensionless"
+    }
+  ],
+  "evolved_fields": [
+    "ey",
+    "ez",
+    "hy",
+    "hz"
+  ],
+  "units": {
+    "type": "nondimensional with fixed scales across trajectories",
+    "space_scale": "fixed L_star",
+    "time_scale": "fixed T_star",
+    "field_scales": {
+      "ey": "fixed declared transverse field scale",
+      "ez": "fixed declared transverse field scale",
+      "hy": "fixed declared transverse field scale",
+      "hz": "fixed declared transverse field scale"
+    },
+    "note": "No SI calibration or measured material specimen is claimed."
+  },
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "axes": [
+        "x"
+      ],
+      "periods": [
+        6.283185307179586
+      ]
+    }
+  },
+  "boundary": {
+    "type": "periodic",
+    "axes": [
+      "x"
+    ],
+    "periods": [
+      6.283185307179586
+    ]
+  },
+  "known_relations": {
+    "kinematic_closure": null,
+    "scope": "Declared auxiliary kinematics only; no unknown evolution or constitutive law supplied."
+  },
+  "acquisition_controls": {
+    "controlled_launch": {
+      "type": "imposed_linear_launch_polarization",
+      "launch_angles_radians": [
+        0.7853981633974483
+      ],
+      "launch_vectors_yz": [
+        [
+          0.7071067811865476,
+          0.7071067811865475
+        ]
+      ],
+      "G_definition": "G=J H, J=[[0,-1],[1,0]], H=(hy,hz); G=(-hz,hy)",
+      "J_matrix": [
+        [
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "material_principal_axes_known": false,
+      "note": "The launch direction is prescribed in this synthetic task and is independent of the unknown dielectric principal axes.",
+      "initial_constraint": "The prescribed initial E and G are aligned with the given launch vector. Their scalar shapes and amplitudes are observed, with the declared measurement noise. This control does not reveal dielectric eigenaxes."
+    }
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 1,
+    "record_ids": [
+      "preparation_1"
+    ],
+    "array_order": [
+      "trajectory",
+      "time",
+      "x"
+    ],
+    "members": {
+      "x": {
+        "shape": [
+          128
+        ]
+      },
+      "time": {
+        "shape": [
+          129
+        ]
+      },
+      "ey": {
+        "shape": [
+          1,
+          129,
+          128
+        ]
+      },
+      "ez": {
+        "shape": [
+          1,
+          129,
+          128
+        ]
+      },
+      "hy": {
+        "shape": [
+          1,
+          129,
+          128
+        ]
+      },
+      "hz": {
+        "shape": [
+          1,
+          129,
+          128
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "added": false
+    }
+  }
+}

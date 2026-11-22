@@ -1,0 +1,18 @@
+{
+  "task_id": "case_a30a75a6a3467cf2",
+  "conditions_file": "conditions.npz",
+  "records": [
+    {
+      "query_id": "later_wave_window",
+      "physical_role": "Later measured initial state in the same experiment and camera window."
+    }
+  ],
+  "release_stage": "after model and coefficients freeze",
+  "boundary": {
+    "type": "measured_strips_1d",
+    "width": 5,
+    "meaning": "Known measured elevation in the first and last five grid nodes throughout prediction; not tank-wall boundary conditions."
+  },
+  "same_dynamics": "Same experiment; assess reuse of one effective model on a later measured state.",
+  "prediction_scope": "Interior evolution conditional on the observed edge strips; all 25 future frames are evaluated."
+}

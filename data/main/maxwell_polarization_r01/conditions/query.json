@@ -1,0 +1,125 @@
+{
+  "schema": "field2law.physical_purpose_query.v1",
+  "task_id": "case_ce7715f130495eaa",
+  "status": "candidate_prediction_inputs_not_runtime_admitted",
+  "release_stage": "After frozen model submission",
+  "records": [
+    {
+      "query_id": "query_1",
+      "initial_record": 0,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    },
+    {
+      "query_id": "query_2",
+      "initial_record": 1,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    }
+  ],
+  "initial_asset": {
+    "path": "initial_conditions.npz",
+    "members": {
+      "time": {
+        "shape": [
+          129
+        ],
+        "dtype": "<f8"
+      },
+      "x": {
+        "shape": [
+          128
+        ],
+        "dtype": "<f8"
+      },
+      "initial__ey": {
+        "shape": [
+          2,
+          128
+        ],
+        "dtype": "<f8"
+      },
+      "initial__ez": {
+        "shape": [
+          2,
+          128
+        ],
+        "dtype": "<f8"
+      },
+      "initial__hy": {
+        "shape": [
+          2,
+          128
+        ],
+        "dtype": "<f8"
+      },
+      "initial__hz": {
+        "shape": [
+          2,
+          128
+        ],
+        "dtype": "<f8"
+      }
+    }
+  },
+  "boundary_controls": null,
+  "boundary": {
+    "type": "periodic",
+    "axes": [
+      "x"
+    ],
+    "periods": [
+      6.283185307179586
+    ]
+  },
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "axes": [
+        "x"
+      ],
+      "periods": [
+        6.283185307179586
+      ]
+    }
+  },
+  "units": {
+    "type": "nondimensional with fixed scales across trajectories",
+    "space_scale": "fixed L_star",
+    "time_scale": "fixed T_star",
+    "field_scales": {
+      "ey": "fixed declared transverse field scale",
+      "ez": "fixed declared transverse field scale",
+      "hy": "fixed declared transverse field scale",
+      "hz": "fixed declared transverse field scale"
+    },
+    "note": "No SI calibration or measured material specimen is claimed."
+  },
+  "evolved_fields": [
+    "ey",
+    "ez",
+    "hy",
+    "hz"
+  ],
+  "known_relations": {
+    "kinematic_closure": null,
+    "scope": "Declared auxiliary kinematics only; no unknown evolution or constitutive law supplied."
+  },
+  "hidden_outputs": [
+    "ey",
+    "ez",
+    "hy",
+    "hz"
+  ],
+  "constraints": [
+    "No test-time coefficient fitting.",
+    "No hidden interior values may be accessed during discovery or prediction.",
+    "Use the submitted model to implement any required flux and boundary operation; do not fill missing model quantities using reference coefficients."
+  ],
+  "known_launch_angles_radians": [
+    0.7853981633974483,
+    0.6107259643892086
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "task_id": "case_25f95d5e132f5612",
+  "context": "The simulations follow two reacting and diffusing species in a uniform one-dimensional periodic reactor: substrate u and activator v, both with nonnegative concentrations. An effective autocatalytic conversion consumes one net unit of substrate and produces one net unit of activator. Exchange with a well-mixed reservoir supplies substrate and removes both local species at a common exchange rate; the activator also undergoes irreversible loss. The reaction is assumed to obey effective mass-action kinetics.\n\nBoth concentration fields are observed for lower and higher initial activator seeding at the same substrate background, without added measurement noise. The task is to infer their coupled evolution laws and unknown kinetic and transport parameters, then predict both concentration fields from new initial loadings. The material, reservoir setting and scales stay fixed, and the fitted laws and parameters are not adjusted for prediction.",
+  "fields": [
+    {
+      "name": "u",
+      "meaning": "physically nonnegative substrate concentration; supplied observations follow the declared noise model",
+      "role": "state_to_evolve",
+      "member": "u",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "v",
+      "meaning": "physically nonnegative activator concentration; supplied observations follow the declared noise model",
+      "role": "state_to_evolve",
+      "member": "v",
+      "unit": "dimensionless"
+    }
+  ],
+  "evolved_fields": [
+    "u",
+    "v"
+  ],
+  "units": "fixed nondimensional coordinates and fields, with explicit reference scales if dimensional interpretation is supplied",
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 6.283185307179586
+      }
+    }
+  },
+  "boundary": {
+    "type": "periodic",
+    "periods": {
+      "x": 6.283185307179586
+    }
+  },
+  "known_relations": {
+    "kinematic_closure": null,
+    "scope": "Declared auxiliary kinematics only; no unknown evolution or constitutive law supplied."
+  },
+  "acquisition_controls": {
+    "controlled_launch": null
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 2,
+    "record_ids": [
+      "preparation_1",
+      "preparation_2"
+    ],
+    "array_order": [
+      "trajectory",
+      "time",
+      "x"
+    ],
+    "members": {
+      "time": {
+        "shape": [
+          129
+        ]
+      },
+      "x": {
+        "shape": [
+          128
+        ]
+      },
+      "u": {
+        "shape": [
+          2,
+          129,
+          128
+        ]
+      },
+      "v": {
+        "shape": [
+          2,
+          129,
+          128
+        ]
+      }
+    },
+    "measurement_noise": {
+      "distribution": "none",
+      "added": false
+    }
+  }
+}

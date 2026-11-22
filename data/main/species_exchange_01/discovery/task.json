@@ -1,0 +1,46 @@
+{
+  "task_id": "case_9941761f40393f82",
+  "context": "The simulations follow two dilute species that interconvert reversibly in a closed, homogeneous medium represented by a one-dimensional periodic domain. Both concentration fields u and v are observed in the same fixed units. Interconversion preserves their total amount, and each species diffuses. Temperature and material remain fixed, with no external supply or removal. The response is linear in this dilute regime, while diffusion and exchange rates are unknown.\n\nTwo initial mixtures are observed without added measurement noise: one is rich in u and the other in v, with different spatial concentration profiles. Infer coupled evolution laws that predict both concentrations from other initial mixtures and profiles within the same regime. The fitted laws and parameters remain fixed for these predictions.",
+  "fields": [
+    {
+      "name": "u",
+      "unit": "fixed nondimensional",
+      "role": "state_to_evolve"
+    },
+    {
+      "name": "v",
+      "unit": "fixed nondimensional",
+      "role": "state_to_evolve"
+    }
+  ],
+  "evolved_fields": [
+    "u",
+    "v"
+  ],
+  "geometry": {
+    "axes": [
+      "x"
+    ]
+  },
+  "boundary": {
+    "type": "periodic",
+    "axes": [
+      "x"
+    ],
+    "periods": {
+      "x": 6.283185307179586
+    }
+  },
+  "observations": {
+    "path": "observations.npz",
+    "record_count": 2,
+    "array_order": [
+      "record",
+      "time",
+      "x"
+    ],
+    "measurement_noise": {
+      "added": false
+    }
+  }
+}

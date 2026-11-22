@@ -1,0 +1,32 @@
+{
+  "task_id": "measured_cells_loading",
+  "records": [
+    {
+      "initial_cells_per_well": 12000,
+      "replicate": 1
+    },
+    {
+      "initial_cells_per_well": 12000,
+      "replicate": 2
+    },
+    {
+      "initial_cells_per_well": 12000,
+      "replicate": 3
+    },
+    {
+      "initial_cells_per_well": 18000,
+      "replicate": 1
+    },
+    {
+      "initial_cells_per_well": 18000,
+      "replicate": 2
+    },
+    {
+      "initial_cells_per_well": 18000,
+      "replicate": 3
+    }
+  ],
+  "access": "After model freeze",
+  "known": "initial and measured boundary only",
+  "score": "All six replicates; interior spatial bins 1:-1 and time indices 1:; no exact-law score."
+}

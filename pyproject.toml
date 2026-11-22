@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "field2law-data"
+version = "0.1.0a1"
+description = "Field2Law public PDE discovery observations and modeling tasks"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3"]
+license = {text = "MIT (code); see LICENSES for data terms"}
+
+[tool.setuptools]
+packages = ["field2law"]

@@ -1,0 +1,18 @@
+{
+  "schema": "field2law.physical_purpose_query.v2",
+  "task_id": "case_a9cd6cc4b8744465",
+  "conditions_file": "conditions.npz",
+  "release_stage": "after model and coefficients freeze",
+  "records": [
+    {
+      "query_id": "query_1",
+      "physical_role": "Increase the pressure amplitude within the same linear regime and change the spatial phases of the waveform."
+    },
+    {
+      "query_id": "query_2",
+      "physical_role": "Launch a different spatial profile with a nonzero initial velocity, changing the balance of propagation directions."
+    }
+  ],
+  "same_dynamics": "The material, constitutive response and geometry remain unchanged. Only the declared initial preparation changes.",
+  "initial_representation": "Exact band-limited periodic preparation samples, using Fourier interpolation."
+}

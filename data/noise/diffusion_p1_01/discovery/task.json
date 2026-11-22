@@ -1,0 +1,91 @@
+{
+  "task_id": "case_7c30663b5e1fe1",
+  "context": "The simulations describe the redistribution of a solute in a homogeneous thin layer with impermeable edges. The concentration u is uniform through the thickness, and there is no imposed flow, reaction or internal source. Transport is isotropic and positive; the supplied zero normal concentration gradient represents a no-flux boundary. Two initial concentration distributions have the same spatial modulation but different mean concentrations. Their two-dimensional concentration fields are observed over time, with the declared measurement noise and with fixed nondimensional scales.\n\nThe aim is to infer the evolution law and its constitutive response from these observations, then predict the concentration field from new initial distributions in the same closed layer. The material, geometry and scales remain unchanged, and the inferred constitutive law and fitted parameters are held fixed during prediction.\n\nThe recorded state fields include independent zero-mean Gaussian readout noise. For each field, the noise standard deviation is 1% of its pooled clean public signal RMS. The numerical standard deviations are supplied below. Prescribed boundary control histories remain exact; recorded field samples, including endpoint measurements, may differ from these controls. No clipping or denoising is applied by the dataset.",
+  "fields": [
+    {
+      "name": "u",
+      "role": "state_to_evolve",
+      "meaning": "concentration",
+      "unit": "dimensionless"
+    }
+  ],
+  "units": "Fixed nondimensional spatial, time and concentration scales; no material-specific SI calibration is claimed.",
+  "geometry": {
+    "type": "Cartesian_tensor_grid",
+    "dimension": 2,
+    "array_spatial_axes": [
+      "x",
+      "y"
+    ],
+    "boundary": {
+      "type": "homogeneous_normal_gradient",
+      "faces": [
+        "x_lower",
+        "x_upper",
+        "y_lower",
+        "y_upper"
+      ],
+      "known_value": 0.0
+    },
+    "physical_interpretation": "Closed planar diffusive layer; positive isotropic transport and no flow make the normal-gradient condition a no-flux wall."
+  },
+  "records": {
+    "count": 2,
+    "ids": [
+      "record_01",
+      "record_02"
+    ],
+    "relationship": "Separately prescribed preparations of the same fixed material and geometry; not independent random replicates.",
+    "array_order": [
+      "record",
+      "time",
+      "x",
+      "y"
+    ]
+  },
+  "observations": {
+    "path": "observations.npz",
+    "members": {
+      "time": {
+        "shape": [
+          41
+        ]
+      },
+      "x": {
+        "shape": [
+          33
+        ]
+      },
+      "y": {
+        "shape": [
+          33
+        ]
+      },
+      "u": {
+        "shape": [
+          2,
+          41,
+          33,
+          33
+        ]
+      }
+    },
+    "measurement_noise": {
+      "added": true,
+      "kind": "iid Gaussian",
+      "relative_rms": 0.01,
+      "standard_deviation": {
+        "u": 0.007509387492363412
+      },
+      "clipping": false,
+      "control_histories_perturbed": false
+    },
+    "array_order": [
+      "record",
+      "time",
+      "x",
+      "y"
+    ]
+  },
+  "observation_precision": "Declared Gaussian readout noise; supplied coordinates and control programs remain exact."
+}

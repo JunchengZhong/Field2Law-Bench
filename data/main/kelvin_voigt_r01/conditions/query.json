@@ -1,0 +1,101 @@
+{
+  "schema": "field2law.physical_purpose_query.v1",
+  "task_id": "case_e4fe81ad636246ce",
+  "status": "candidate_prediction_inputs_not_runtime_admitted",
+  "release_stage": "After frozen model submission",
+  "records": [
+    {
+      "query_id": "query_1",
+      "initial_record": 0,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    },
+    {
+      "query_id": "query_2",
+      "initial_record": 1,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    }
+  ],
+  "initial_asset": {
+    "path": "initial_conditions.npz",
+    "members": {
+      "time": {
+        "shape": [
+          129
+        ],
+        "dtype": "<f8"
+      },
+      "x": {
+        "shape": [
+          128
+        ],
+        "dtype": "<f8"
+      },
+      "initial__strain": {
+        "shape": [
+          2,
+          128
+        ],
+        "dtype": "<f8"
+      },
+      "initial__v": {
+        "shape": [
+          2,
+          128
+        ],
+        "dtype": "<f8"
+      }
+    }
+  },
+  "boundary_controls": null,
+  "boundary": {
+    "type": "periodic",
+    "axes": [
+      "x"
+    ],
+    "periods": [
+      6.283185307179586
+    ]
+  },
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "axes": [
+        "x"
+      ],
+      "periods": [
+        6.283185307179586
+      ]
+    }
+  },
+  "units": {
+    "type": "nondimensional with independent fixed scales",
+    "space_scale": "fixed L_star",
+    "time_scale": "fixed T_star",
+    "field_scales": {
+      "strain": "physical longitudinal strain divided by 0.001",
+      "v": "particle velocity divided by 0.001 L_star/T_star"
+    },
+    "note": "Fixed scales across all trajectories; coefficients to discover are dimensionless. No physical SI calibration is claimed for these controlled prototypes."
+  },
+  "evolved_fields": [
+    "strain",
+    "v"
+  ],
+  "known_relations": {
+    "kinematic_closure": null,
+    "scope": "Declared auxiliary kinematics only; no unknown evolution or constitutive law supplied."
+  },
+  "hidden_outputs": [
+    "strain",
+    "v"
+  ],
+  "constraints": [
+    "No test-time coefficient fitting.",
+    "No hidden interior values may be accessed during discovery or prediction.",
+    "Use the submitted model to implement any required flux and boundary operation; do not fill missing model quantities using reference coefficients."
+  ]
+}

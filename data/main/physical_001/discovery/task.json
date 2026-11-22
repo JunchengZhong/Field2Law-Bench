@@ -1,0 +1,50 @@
+{
+  "task_id": "physical_001",
+  "context": "The simulations describe temperature redistribution in a uniform, stationary bar whose ends are thermally insulated. The field u is temperature departure from a reference temperature. After a nonuniform initial heating, there is no volumetric heating and no heat crosses either end. Temperature profiles are observed over time without added measurement noise, using fixed nondimensional coordinates and scales.\n\nThe aim is to infer an evolution law from these observations and use it to predict the temperature distribution after changing the amount or side of the initial heating. The same bar and thermal boundary conditions are used throughout. The inferred material law and fitted parameters remain fixed during prediction.",
+  "field": {
+    "name": "u",
+    "units": "nondimensional",
+    "observation_type": "scalar field"
+  },
+  "coordinates": {
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "space": "x",
+    "time": "t",
+    "units": "nondimensional",
+    "grid": "Uniform observed nodes including both endpoints."
+  },
+  "boundary": {
+    "type": "no_flux",
+    "meaning": "No heat crosses either endpoint."
+  },
+  "records": [
+    {
+      "case_id": "observe_relaxation",
+      "role": "Observe a nonuniform heating preparation relax without external heat exchange."
+    }
+  ],
+  "data_axes": {
+    "u": [
+      "record",
+      "time",
+      "space"
+    ],
+    "boundary_history": [
+      "record",
+      "time",
+      "control"
+    ]
+  },
+  "observation_precision": "No added sensor noise.",
+  "observations": {
+    "path": "observations.npz",
+    "array_order": [
+      "record",
+      "time",
+      "space"
+    ]
+  }
+}

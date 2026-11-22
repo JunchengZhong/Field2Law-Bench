@@ -1,0 +1,72 @@
+{
+  "task_id": "physical_005",
+  "context": "The simulations describe heat transport through two bonded stationary layers with known heat capacity C = 1 and unknown normalized conductivities. The field u is temperature departure from a reference temperature. The interface is at x = 0.45; contact is ideal, with continuous temperature and conductive flux and no interfacial storage or resistance. The left temperature is prescribed. At the right end, outward heat flux equals h times the difference between surface and ambient temperatures, with known h = 0.15. There is no volumetric heating.\n\nThree records, without added measurement noise, follow heating of the left layer, heating of the right layer, and warming of the ambient environment. Infer the thermal evolution and constitutive flux needed to predict new initial heating distributions and ambient-temperature histories. The assembly and boundary apparatus are unchanged, and the fitted material law and parameters remain fixed.",
+  "field": {
+    "name": "u",
+    "units": "nondimensional",
+    "observation_type": "scalar field"
+  },
+  "coordinates": {
+    "domain": [
+      0.0,
+      1.0
+    ],
+    "space": "x",
+    "time": "t",
+    "units": "nondimensional",
+    "grid": "Uniform observed nodes including both endpoints."
+  },
+  "boundary": {
+    "type": "mixed_dirichlet_robin",
+    "left": "u(0,t)=g_left(t)",
+    "right": "outward candidate heat flux=h*(u(1,t)-ambient(t))",
+    "known_h": 0.15,
+    "control_names": [
+      "g_left",
+      "ambient"
+    ]
+  },
+  "material": {
+    "interface_location": 0.45,
+    "known_capacity": 1.0,
+    "interface_conditions": [
+      "continuous temperature",
+      "continuous conductive flux"
+    ]
+  },
+  "records": [
+    {
+      "case_id": "observe_left_layer_heat",
+      "role": "Initially heat only the left layer; left support and right ambient remain at reference temperature."
+    },
+    {
+      "case_id": "observe_right_layer_heat",
+      "role": "Initially heat only the right layer under the same boundary apparatus."
+    },
+    {
+      "case_id": "observe_warm_environment",
+      "role": "Start both layers at reference temperature; smoothly raise the ambient temperature at the fixed exchange boundary and hold it."
+    }
+  ],
+  "data_axes": {
+    "u": [
+      "record",
+      "time",
+      "space"
+    ],
+    "boundary_history": [
+      "record",
+      "time",
+      "control"
+    ]
+  },
+  "observation_precision": "No added sensor noise.",
+  "observations": {
+    "path": "observations.npz",
+    "array_order": [
+      "record",
+      "time",
+      "space"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "field2law.physical_purpose_query.v1",
+  "task_id": "case_3e4a583975ae39d8",
+  "status": "candidate_prediction_inputs_not_runtime_admitted",
+  "release_stage": "After frozen model submission",
+  "records": [
+    {
+      "query_id": "query_1",
+      "initial_record": 0,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    },
+    {
+      "query_id": "query_2",
+      "initial_record": 1,
+      "known_inputs": "Prescribed initial state and any supplied boundary program; material and geometry remain fixed."
+    }
+  ],
+  "initial_asset": {
+    "path": "initial_conditions.npz",
+    "members": {
+      "time": {
+        "shape": [
+          257
+        ],
+        "dtype": "<f8"
+      },
+      "x": {
+        "shape": [
+          128
+        ],
+        "dtype": "<f8"
+      },
+      "y": {
+        "shape": [
+          128
+        ],
+        "dtype": "<f8"
+      },
+      "initial__u": {
+        "shape": [
+          2,
+          128,
+          128
+        ],
+        "dtype": "<f8"
+      }
+    }
+  },
+  "boundary_controls": null,
+  "boundary": {
+    "type": "periodic",
+    "periods": {
+      "x": 6.283185307179586,
+      "y": 6.283185307179586
+    }
+  },
+  "geometry": {
+    "type": "periodic_cartesian",
+    "axes": [
+      "x",
+      "y"
+    ],
+    "boundary": {
+      "type": "periodic",
+      "periods": {
+        "x": 6.283185307179586,
+        "y": 6.283185307179586
+      }
+    }
+  },
+  "units": "fixed nondimensional coordinates and fields, with explicit reference scales if dimensional interpretation is supplied",
+  "evolved_fields": [
+    "u"
+  ],
+  "known_relations": {
+    "kinematic_closure": null,
+    "scope": "Declared auxiliary kinematics only; no unknown evolution or constitutive law supplied."
+  },
+  "hidden_outputs": [
+    "u"
+  ],
+  "constraints": [
+    "No test-time coefficient fitting.",
+    "No hidden interior values may be accessed during discovery or prediction.",
+    "Use the submitted model to implement any required flux and boundary operation; do not fill missing model quantities using reference coefficients."
+  ]
+}
